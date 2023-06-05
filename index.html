@@ -34,6 +34,7 @@
 
     <title>Document</title>
 
+
         <!-- Required meta tags -->
     <meta name="title" content="Title here" />
     <meta name="discrption" content="Discrption here" />
@@ -50,11 +51,15 @@
     <meta property="og:description" content="Discrption here">
     <meta property="og:image" content="assets/img/logo.png">
     <meta property="og:image:secure_url" content="assets/img/logo.png">
-
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" />
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
     <meta name="classification" content="Title here" />
     <link rel="canonical" href="" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <!-- jquery owl-carsoual -->
+    <script src="assets/libs/bootstrap/slider/js/jquery.min.js"></script>
+    <!-- owlcarsoual css  -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/slider/css/owl.carousel.min.css">
+
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom Css -->
@@ -62,55 +67,1007 @@
 </head>
 <body>
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg " aria-label="Offcanvas navbar large">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./assets/img/Navbar/logo.svg" alt="logo" class="img-fluid w-100 "></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<nav class="navbar navbar-expand-xl container-fluid p-0 w-100" aria-label="Offcanvas navbar large">
+    <div class="container ">
+      <a class="navbar-brand logo p-0 h-auto" href="#"><img src="./assets/img/Navbar/logo.svg" alt="logo" class="img-fluid w-100 "></a>
+      <div class="offcanvas offcanvas-end  navbar-offcanvas" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header shadow-sm ">
+          <div class="offcanvas-logo" id="offcanvasNavbar2Label"> <a class="navbar-brand logo p-0 h-auto" href="#"><img src="./assets/img/Navbar/logo.svg" alt="logo" class="img-fluid w-100 "></a></div>
+          <button type="button" class="btn-close btn-close-black text-black border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-start  gap-xl-2 ps-xl-3 ps-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active text-black fw-bolder" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link text-black fw-medium" href="#">Student</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
+            <li class="nav-item">
+                <a class="nav-link text-black fw-medium" href="#">Collaboraton</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-medium" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-medium" href="#">Cohort Programs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-medium" href="#">Contact Us</a>
+              </li>
           </ul>
-          <form class="d-flex mt-3 mt-lg-0" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <div class="d-flex gap-2 ps-xl-5 ps-0 pt-xl-0 pt-2 ">
+            <a href="#" class="btn Custom-btn Outline-btn"> Login</a>
+            <a href="#" class="btn Custom-btn">Register</a>
+          </div>
+        </div>
+      </div>
+          <div class="icons-nav d-flex align-items-center gap-3">
+            <button class="navbar-toggler border-0 shadow-none offcanvas-btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#" class="text-decoration-none icon "><img src="./assets/img/Navbar/heart.svg" alt="herat" class="img-fluid w-100 h-100"></a>
+            <a href="#" class="text-decoration-none icon"><img src="./assets/img/Navbar/search.svg" alt="search" class="ing-fluid w-100 h-100"></a>
+          </div>
+    </div>
+</nav>
+<!-- hero-section  -->
+<div class="container-fluid position-relative px-0 hero-section py-2">
+  <div class="container py-2">
+    <div class="row py-md-5 py-3 ">
+      <div class="col-12 py-2  text-lg-start text-center">
+        <div class="hero-title fw-bold">FIND YOUR <span>DREAM COLLEGE</span></div>
+      </div>
+      <div class="Country col-12 py-2 ">
+        <div class="row">
+          <div class="col-lg-7 col-md-10 col-12 mx-lg-0 mx-auto">
+            <div class="row justify-content-center align-items-center  bg-white mx-0 rounded-2">
+              <div class="col-sm-6">
+                <div class="input-group border-0 shadow-none  py-2 ">
+                  <label class="input-group-text bg-white border-0 rounded-0" for="inputGroupSelect01"><img src="./assets/img/Main-page/map.svg" alt="map" class="img-fluid w-100 h-100"></label>
+                  <select class="form-select border-0 shadow-none rounded-0" id="inputGroupSelect01">
+                    <option selected>Country</option>
+                    <option value="1">Haryana</option>
+                    <option value="2">Rajasthan</option>
+                    <option value="3">Punjab</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="input-group border-0 shadow-none   py-2 col-6">
+                  <label class="input-group-text bg-white border-0 border-sm-start border-light-subtle rounded-0" for="inputGroupSelect01"><img src="./assets/img/Main-page/University.svg" alt="map" class="img-fluid w-100 h-100"></label>
+                  <select class="form-select border-0 shadow-none rounded-0" id="inputGroupSelect01">
+                    <option selected>University</option>
+                    <option value="1">Cdlu</option>
+                    <option value="2">Skd</option>
+                    <option value="3">Mgsu</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 py-2 ">
+        <div class="row">
+          <div class="col-lg-7 col-md-10 col-12 mx-lg-0 mx-auto ">
+            <div class="input-group border-0  bg-white rounded-2 d-flex align-items-center justify-content-center">
+              <input type="text place-holder" class="form-control py-3  border-0 shadow-none" placeholder="Serach Course Name, Keywords" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <span class="input-group-text py-2 serach-2 rounded-2 border-0 m-1 shadow-none" id="basic-addon2"><img src="./assets/img/Main-page/search-2.svg" alt="search-2" class="img-fluid w-100 h-100 " ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12  py-2">
+        <div class="sub-title text-capitalize fw-medium text-lg-start text-center"> Educational excellence with <br> no borders.</div>
+      </div>
+      <div class="col-12  py-2 ">
+        <div class=" d-flex align-items-center flex-column flex-md-row gap-3 justify-content-lg-start justify-content-center">
+          <a href="#" class="text-decoration-none Custom-btn  rounded-2 ">I am a student exploring studying abroad</a>
+          <a href="#" class="text-decoration-none Custom-btn Outline-btn border-0 rounded-2 ">I am a recruitment partner</a>
+          <a href="#" class="text-decoration-none Custom-btn Outline-btn  border-0 rounded-2 d-lg-block d-md-none d-block">I work at a school</a>
         </div>
       </div>
     </div>
-</nav>
+    </div>
+</div>
+<!-- talk to on export  -->
+ <div class="container-fluid talk-export">
+    <div class="row align-items-center justify-content-center talk-export-section">
+      <div class="col-sm-4 white-gray-section py-4 d-flex align-items-center justify-content-center">
+        <div class="row ">
+          <div class="col-xl-auto d-flex align-items-center justify-content-xl-start justify-content-center">
+            <div class="sub-heading  fw-bold  text-md-start text-center">Talk to an <span>Expert</span></div>
+          </div>
+          <div class="col-xl  d-flex align-items-center justify-content-xl-start justify-content-center pt-xl-0 pt-1"><a href="#" class="text-decoration-none btn Custom-btn Outline-btn border-0 d-flex flex-nowrap d-xl-none">Talk to our team</a></div>
+        </div>
+      </div>
+      <div class="col-sm-4 red-section py-4 d-flex align-items-center justify-content-center ">
+        <div class="row ">
+          <div class="col-xl-auto d-flex align-items-center justify-content-xl-start justify-content-center">
+            <div class="sub-heading text-white d-flex align-items-center  gap-2"><span class="icon  d-inline-flex"><img src="./assets/img/Main-page/University2.svg" alt="University2" class="img-fluid w-100 h-100  "></span> For Student</div>
+          </div>
+          <div class="col-xl  d-flex align-items-center justify-content-xl-start justify-content-center pt-xl-0 pt-1"><a href="#" class="text-decoration-none btn Custom-btn Glass-btn border-0 d-flex flex-nowrap">Talk to our team</a></div>
+        </div>
+      </div>
+      <div class="col-sm-4 py-4 d-flex align-items-center justify-content-center redSection2">
+        <div class="row ">
+          <div class="col-xl-auto d-flex align-items-center justify-content-xl-start justify-content-center">
+            <div class="sub-heading text-white d-flex align-items-center gap-2"><span class="icon d-inline-flex"><img src="./assets/img/Main-page/heand.svg" alt="University2" class="img-fluid w-100 h-100  "></span> For Business</div>
+          </div>
+          <div class="col-xl  d-flex align-items-center justify-content-xl-start justify-content-center pt-xl-0 pt-1"><a href="#" class="text-decoration-none btn Custom-btn Glass-btn border-0 d-flex flex-nowrap">Talk to our team</a></div>
+        </div>
+      </div>
+    </div>
+</div> 
 
+<!-- popular Search  -->
+<div class="container-fluid py-lg-5 py-md-4 py-sm-2 bg-light popularSeachers">
+  <div class="container">
+    <div class="row py-4 mx-0">
+      <div class="col-12">
+        <div class="main-heading fw-bold text-center">Popular Seachers</div>
+      </div>
+    </div>
+    <div class="row py-4 mx-0 align-items-center justify-content-center border-light-subtle border-2 border rounded-2 PopularSection ">
+      <div class="col-lg-2 col-md-6">
+        <div class=" PopularImage mx-auto py-lg-0 pb-2"><img src="./assets/img/Main-page/image1.svg" alt="image1" class="img-fluid w-100 h-100"></div>
+      </div>
+      <div class="col-lg-4  col-md-6 inner-data py-md-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0  ">
+            <div class="fw-semibold Sub-title-heading text-md-start text-center text-black">Masters in Computer Sicence and Engineering</div>
+          </div>
+          <div class="col-12 px-0  ">
+            <div class="row align-items-center px-0 mx-0">
+              <div class="col-md-auto text-lg-start text-center ps-0">
+                <div class="theme1Heading ">University of Cincinnati</div>
+              </div>
+              <div class="col-md-auto ">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-6 col-3  border-start border-light-subtle border-2 border-end ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                  <div class="col-md-6 col-3 ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 inner-data py-md-0 pt-3">
+        <div class="row">
+          <div class="col-md-10 col-7 mx-auto border-start border-light-subtle border-2 border-end section-border">
+            <div class="d-flex align-items-center justify-content-center py-1"><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+            <div class="d-flex align-items-center justify-content-center "><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/date.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 inner-data  py-lg-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0 d-flex align-items-center justify-content-center ">
+            <a href="#" class="text-decoration-none Custom-btn Outline-btn border-light-subtle btn" >Shortlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mx-0 py-4 align-items-center justify-content-center border-light-subtle border-2 border rounded-2 PopularSection ">
+      <div class="col-lg-2 col-md-6">
+        <div class=" PopularImage mx-auto py-lg-0 pb-2"><img src="./assets/img/Main-page/image2.svg" alt="image1" class="img-fluid w-100 h-100"></div>
+      </div>
+      <div class="col-lg-4  col-md-6 inner-data py-md-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0  ">
+            <div class="fw-semibold Sub-title-heading text-md-start text-center text-black">Masters in AI and ML </div>
+          </div>
+          <div class="col-12 px-0  ">
+            <div class="row align-items-center px-0 mx-0">
+              <div class="col-md-auto text-lg-start text-center ps-0">
+                <div class="theme1Heading ">Clarkson University</div>
+              </div>
+              <div class="col-md-auto ">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-6 col-3  border-start border-light-subtle border-2 border-end ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Computers</a>
+                  </div>
+                  <div class="col-md-6 col-3 ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 inner-data py-md-0 pt-3">
+        <div class="row">
+          <div class="col-md-10 col-7 mx-auto border-start border-light-subtle border-2 border-end section-border">
+            <div class="d-flex align-items-center justify-content-center py-1"><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+            <div class="d-flex align-items-center justify-content-center "><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 inner-data  py-lg-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0 d-flex align-items-center justify-content-center ">
+            <a href="#" class="text-decoration-none Custom-btn Outline-btn border-light-subtle btn" >Shortlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mx-0 py-4 align-items-center justify-content-center border-light-subtle border-2 border rounded-2 PopularSection ">
+      <div class="col-lg-2 col-md-6">
+        <div class=" PopularImage mx-auto py-lg-0 pb-2"><img src="./assets/img/Main-page/image1.svg" alt="image1" class="img-fluid w-100 h-100"></div>
+      </div>
+      <div class="col-lg-4  col-md-6 inner-data py-md-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0  ">
+            <div class="fw-semibold Sub-title-heading text-md-start text-center text-black">Masters in Computer Sicence and Engineering</div>
+          </div>
+          <div class="col-12 px-0  ">
+            <div class="row align-items-center px-0 mx-0">
+              <div class="col-md-auto text-lg-start text-center ps-0">
+                <div class="theme1Heading ">University of Cincinnati</div>
+              </div>
+              <div class="col-md-auto ">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-6 col-3  border-start border-light-subtle border-2 border-end ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                  <div class="col-md-6 col-3 ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 inner-data py-md-0 pt-3">
+        <div class="row">
+          <div class="col-md-10 col-7 mx-auto border-start border-light-subtle border-2 border-end section-border">
+            <div class="d-flex align-items-center justify-content-center py-1"><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+            <div class="d-flex align-items-center justify-content-center "><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 inner-data  py-lg-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0 d-flex align-items-center justify-content-center ">
+            <a href="#" class="text-decoration-none Custom-btn Outline-btn border-light-subtle btn" >Shortlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mx-0 py-4 align-items-center justify-content-center border-light-subtle border-2 border rounded-2 PopularSection ">
+      <div class="col-lg-2 col-md-6">
+        <div class=" PopularImage mx-auto py-lg-0 pb-2"><img src="./assets/img/Main-page/image1.svg" alt="image1" class="img-fluid w-100 h-100"></div>
+      </div>
+      <div class="col-lg-4  col-md-6 inner-data py-md-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0  ">
+            <div class="fw-semibold Sub-title-heading text-md-start text-center text-black">Masters in Computer Sicence and Engineering</div>
+          </div>
+          <div class="col-12 px-0  ">
+            <div class="row align-items-center px-0 mx-0">
+              <div class="col-md-auto text-lg-start text-center ps-0">
+                <div class="theme1Heading ">University of Cincinnati</div>
+              </div>
+              <div class="col-md-auto ">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-md-6 col-3  border-start border-light-subtle border-2 border-end ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                  <div class="col-md-6 col-3 ">
+                    <a href="#" class="text-decoration-none  d-flex align-items-center justify-content-lg-start justify-content-center theme2Heading fw-semibold"><span class="icon d-inline-flex "><img src="./assets/img/Main-page/user.svg" alt="star" class="img-fluid w-100 h-100 "></span> Public</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 inner-data py-md-0 pt-3">
+        <div class="row">
+          <div class="col-md-10 col-7 mx-auto border-start border-light-subtle border-2 border-end section-border">
+            <div class="d-flex align-items-center justify-content-center py-1"><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+            <div class="d-flex align-items-center justify-content-center "><a href="#" class="d-flex align-items-center  text-decoration-none fw-medium Sub-title-heading text-black"><span class="d-inline-flex pe-2"><img src="./assets/img/Main-page/coin.svg" alt="coin" class="img-fluid w-100"></span> Course Fee : <span class=" theme2Heading">$ 17,257</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 inner-data  py-lg-0 pt-3">
+        <div class="row ">
+          <div class="col-12 px-0 d-flex align-items-center justify-content-center ">
+            <a href="#" class="text-decoration-none Custom-btn Outline-btn border-light-subtle btn" >Shortlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row py-3 mx-0">
+      <div class="center-btn text-center"><a href="#" class="text-decoration-none btn Custom-btn">View All</a></div>
+    </div>
 
+  </div>
+</div> 
 
+<!-- platform suports -->
+ <div class="container-fluid py-5 platformSuports">
+  <div class="container">
+    <div class="row pb-3">
+      <div class="col-12">
+        <div class="main-heading fw-bold text-center ">A Platform that <span class="">support you End-to-End</span> </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-11 mx-auto">
+        <ul class="nav nav-tabs border-0 d-flex align-items-center justify-content-center flex-nowrap overflow-x-auto overflow-y-hidden" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link border-0 shadow-none rounded-0 text-black fw-semibold active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Students</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link border-0 shadow-none rounded-0 text-black fw-semibold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link border-0 shadow-none rounded-0 text-black fw-semibold " id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</a>
+          </li>
+        </ul>
+        <div class="tab-content py-5" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="row">
+              <div class="col-12 ">
+                <div class="row">
+                  <div class="col-5 platform-dots position-relative">
+                    <div class="platform-images position-relative z-2 ps-2">
+                      <img src="./assets/img/Main-page/platform-img.svg" alt="platform-img" class="img-fluid w-100 h-100">
+                    </div>
+                  </div>
+                  <div class="col-7 d-flex flex-column justify-content-center">
+                    <div class="fw-bolder sub-heading py-1">STUDENTS</div>
+                    <div class="pera fw-medium">We believe in your dreams and work hard to make them a reality. Get matched with and apply to programs and schools that align with your background, skills, and interests.</div>
+                    <div class="py-4"><a href="#" class="text-decoration-none btn Custom-btn">Sign-up</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row">
+              <div class="col-12 ">
+                <div class="row">
+                  <div class="col-5 platform-dots position-relative">
+                    <div class="platform-images position-relative z-2 ps-2">
+                      <img src="./assets/img/Main-page/platform-img.svg" alt="platform-img" class="img-fluid w-100 h-100">
+                    </div>
+                  </div>
+                  <div class="col-7 d-flex flex-column justify-content-center">
+                    <div class="fw-bolder sub-heading py-1">STUDENTS</div>
+                    <div class="pera fw-medium">We believe in your dreams and work hard to make them a reality. Get matched with and apply to programs and schools that align with your background, skills, and interests.</div>
+                    <div class="py-4"><a href="#" class="text-decoration-none btn Custom-btn">Sign-up</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="row">
+              <div class="col-12 ">
+                <div class="row">
+                  <div class="col-5 platform-dots position-relative">
+                    <div class="platform-images position-relative z-2 ps-2">
+                      <img src="./assets/img/Main-page/platform-img.svg" alt="platform-img" class="img-fluid w-100 h-100">
+                    </div>
+                  </div>
+                  <div class="col-7 d-flex flex-column justify-content-center">
+                    <div class="fw-bolder sub-heading py-1">STUDENTS</div>
+                    <div class="pera fw-medium">We believe in your dreams and work hard to make them a reality. Get matched with and apply to programs and schools that align with your background, skills, and interests.</div>
+                    <div class="py-4"><a href="#" class="text-decoration-none btn Custom-btn">Sign-up</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- how we help  -->
+<div class="container-fluid bg-light py-5 howToPlay">
+  <div class="container">
+    <div class="row pb-3">
+      <div class="col-12">
+        <div class="main-heading fw-bold text-center ">How we Help</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 howToPlaySection rounded-2 position-relative">
+        <div class="howToPlayImg mx-auto ">
+          <a href="#" class="videoplay rounded-circle mx-auto d-flex align-items-center justify-content-center ">
+            <span class="text-decoration-none d-flex align-items-center justify-content-center"><span class="icon d-inline-flex align-items-center justify-content-center"><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="img-fluid w-100 h-100"></span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row py-4 mx-0">
+      <div class="center-btn text-center"><a href="#" class="text-decoration-none btn Custom-btn">Partner With Us</a></div>
+    </div>
+  </div>
+</div>
+<!-- What Our Students Say  -->
+<div class="container-fluid py-5 studentSay ">
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+        <div class="main-heading fw-bold text-center ">A Platform that <span class="">support you End-to-End</span> </div>
+      </div>
+    </div>
+    <div class="row studentsSaysection owl-carousel studentSayowl px-0">
+      <div class="col-12  item pt-5">
+        <div class="card h-100 position-relative py-4 active">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/card-image.svg" alt="card-image" class="w-100  h-100 img-fluid rounded-circle"></a>
+             
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Grishmitha - STUDENT</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+              <div class="pera pt-1 card-subheading fw-semibold">Missouri State University</div>
+              <div class="pera fw-semibold card-subheading-title ">Springgfield, Missouri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 item pt-5">
+        <div class="card h-100 position-relative py-4">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/card-image.svg" alt="card-image" class="w-100  h-100 img-fluid rounded-circle"></a>
+             
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Grishmitha - STUDENT</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+              <div class="pera pt-1 card-subheading fw-semibold">Missouri State University</div>
+              <div class="pera fw-semibold card-subheading-title ">Springgfield, Missouri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 item pt-5">
+        <div class="card h-100 position-relative py-4">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/card-image.svg" alt="card-image" class="w-100  h-100 img-fluid rounded-circle"></a>
+             
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Grishmitha - STUDENT</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+              <div class="pera pt-1 card-subheading fw-semibold">Missouri State University</div>
+              <div class="pera fw-semibold card-subheading-title ">Springgfield, Missouri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 item pt-5">
+        <div class="card h-100 position-relative py-4">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/card-image.svg" alt="card-image" class="w-100  h-100 img-fluid rounded-circle"></a>
+             
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Grishmitha - STUDENT</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+              <div class="pera pt-1 card-subheading fw-semibold">Missouri State University</div>
+              <div class="pera fw-semibold card-subheading-title ">Springgfield, Missouri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 item pt-5">
+        <div class="card h-100 position-relative py-4">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/card-image.svg" alt="card-image" class="w-100  h-100 img-fluid rounded-circle"></a>
+             
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Grishmitha - STUDENT</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+              <div class="pera pt-1 card-subheading fw-semibold">Missouri State University</div>
+              <div class="pera fw-semibold card-subheading-title ">Springgfield, Missouri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Students Live Testimonials -->
+<div class="container-fluid py-5 bg-light Testimonials">
+  <div class="container">
+    <div class="row pb-5 ">
+      <div class="col-12 ">
+        <div class="main-heading fw-bold text-center ">Students Live Testimonials </div>
+      </div>
+    </div>
+    <div class="row  owl-carousel owl-theme testimonialsowl">
+          <div class="item col-12">
+              <div class="testimonials-images position-relative">
+                <img src="./assets/img/Main-page/testimonals1.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+                </a>
+            </div>
+          </div>
+          <div class="item col-12">
+              <div class="testimonials-images position-relative">
+                <img src="./assets/img/Main-page/testimonals2.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+                </a>
+            </div>
+            
+          </div>
+          <div class="item col-12">
+              <div class="testimonials-images position-relative">
+                <img src="./assets/img/Main-page/testimonals3.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></a>
+                </a>
+            </div>
+          </div>
+          <div class="item col-12">
+              <div class="testimonials-images position-relative">
+                <img src="./assets/img/Main-page/testimonal4.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+                </a>
+            </div>
+          </div>
+          <div class="item col-12">
+            <div>
+              <div class="testimonials-images position-relative">
+                <img src="./assets/img/Main-page/testimonals1.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+                </a>
+            </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<!-- popularCountries  -->
+<div class="container-fluid py-5 popularCountries">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="theme2Heading fw-semibold">We provide the best service</div>
+        <div class="main-heading fw-bolder lh-2 position-relative ps-4">Apply to <br> Popular Countries</div>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-3">
+        <div class="countries-img rounded-2">
+          <img src="assets/img/Main-page/Unitedstates.svg" alt="Unitedstates" class="w-100 h-100 img-fluid">
+        </div>
+        <div class="theme2Heading py-1 fw-medium">United states</div>
+      </div>
+      <div class="col-3">
+        <div class="countries-img rounded-2">
+          <img src="assets/img/Main-page/canda.svg" alt="canda" class="w-100 h-100 img-fluid">
+        </div>
+        <div class="theme2Heading py-1 fw-medium">Canada</div>
+      </div>
+      <div class="col-3">
+        <div class="countries-img rounded-2">
+          <img src="assets/img/Main-page/Australia.svg" alt="Australia" class="w-100 h-100 img-fluid">
+        </div>
+        <div class="theme2Heading py-1 fw-medium">Australia</div>
+      </div>
+      <div class="col-3">
+        <div class="countries-img rounded-2">
+          <img src="assets/img/Main-page/uk.svg" alt="uk" class="w-100 h-100 img-fluid">
+        </div>
+        <div class="theme2Heading py-1 fw-medium">United kingdom</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- What Our Mentors Say -->
+<div class="container-fluid py-5 bg-light MentorsSay">
+  <div class="container">
+    <div class="row pb-5 ">
+      <div class="col-12 ">
+        <div class="main-heading fw-bold text-center ">What Our Mentors Say</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10 mx-auto">
+        <div class="owl-carousel owl-theme MentorsSayowl position-relative">
+          <div class="item  ">
+              <div class="MentorsSay-images position-relative">
+                <img src="./assets/img/Main-page/MentorsSayowl1.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+                <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                  <span  class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+                </a>
+            </div>
+          </div>
+          <div class="item  ">
+            <div class="MentorsSay-images position-relative">
+              <img src="./assets/img/Main-page/MentorsSay2.svg" alt="MentorsSay2" class="img-fluid w-100 h-100">
+              <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                <span  class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+              </a>
+          </div>
+          </div>
+          <div class="item  ">
+            <div class="MentorsSay-images position-relative">
+              <img src="./assets/img/Main-page/MentorsSay3.svg" alt="MentorsSay3" class="img-fluid w-100 h-100">
+              <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+              </a>
+          </div>
+          </div>
+          <div class="item  ">
+            <div class="MentorsSay-images position-relative">
+              <img src="./assets/img/Main-page/MentorsSayowl1.svg" alt="testimonals1" class="img-fluid w-100 h-100">
+              <a href="#" class="video-img rounded-circle  d-flex align-items-center justify-content-center">
+                <span class="text-decoration-none icon d-flex align-items-center justify-content-center "><img src="./assets/img/Main-page/videoPlay.svg" alt="videoPlay" class="w-100 h-100 img-fluid"></span>
+              </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- IGS Partners -->
+<div class="container-fluid py-5  IGSPartners">
+  <div class="container">
+    <div class="row pb-5 ">
+      <div class="col-12 ">
+        <div class="main-heading fw-bold text-center "> IGS Partners</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="owl-carousel owl-theme igsPartnerowl position-relative">
+          <div class="item shadow-sm ">
+           <div class="row">
+            <div class="col-12">
+              <div class="card pb-5">
+                <div class="card-body">
+                  <div class="text-black fw-semibold theme2Heading d-flex align-items-center justify-content-center">San Francisco, California <a href="#" class="text-decoration-none d-flex align-items-center justify-content-center stretched-link"><span class="icon d-inline-flex align-items-center ps-2"><img src="assets/img/Main-page/Forward.svg" alt="Forward" class="h-100 w-100 "></span></a></div>
+                  <div class="igs-image d-flex align-items-center justify-content-center pt-5 mx-auto"><img src="./assets/img/Main-page/igs1.svg" alt="igs1" class="img-fluid h-100 w-100"></div>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          <div class="item shadow-sm ">
+            <div class="row">
+             <div class="col-12">
+               <div class="card pb-5">
+                 <div class="card-body">
+                   <div class="text-black fw-semibold theme2Heading d-flex align-items-center justify-content-center">San Francisco, California <a href="#" class="text-decoration-none d-flex align-items-center justify-content-center stretched-link"><span class="icon d-inline-flex align-items-center ps-2"><img src="assets/img/Main-page/Forward.svg" alt="Forward" class="h-100 w-100 "></span></a></div>
+                   <div class="igs-image d-flex align-items-center justify-content-center pt-5 mx-auto"><img src="./assets/img/Main-page/igs2.svg" alt="igs1" class="img-fluid h-100 w-100"></div>
+                 </div>
+               </div>
+             </div>
+            </div>
+           </div>
+           <div class="item shadow-sm ">
+            <div class="row">
+             <div class="col-12">
+               <div class="card pb-5">
+                 <div class="card-body">
+                   <div class="text-black fw-semibold theme2Heading d-flex align-items-center justify-content-center">San Francisco, California <a href="#" class="text-decoration-none d-flex align-items-center justify-content-center stretched-link"><span class="icon d-inline-flex align-items-center ps-2"><img src="assets/img/Main-page/Forward.svg" alt="Forward" class="h-100 w-100 "></span></a></div>
+                   <div class="igs-image pt-5 d-flex align-items-center justify-content-center mx-auto"><img src="./assets/img/Main-page/igs3.svg" alt="igs1" class="img-fluid h-100 w-100"></div>
+                 </div>
+               </div>
+             </div>
+            </div>
+           </div>
+           <div class="item shadow-sm ">
+            <div class="row">
+             <div class="col-12">
+               <div class="card pb-5">
+                 <div class="card-body">
+                   <div class="text-black fw-semibold theme2Heading d-flex align-items-center justify-content-center">San Francisco, California <a href="#" class="text-decoration-none d-flex align-items-center justify-content-center stretched-link"><span class="icon d-inline-flex align-items-center ps-2"><img src="assets/img/Main-page/Forward.svg" alt="Forward" class="h-100 w-100 "></span></a></div>
+                   <div class="igs-image pt-5 d-flex align-items-center justify-content-center mx-auto"><img src="./assets/img/Main-page/igs4.svg" alt="igs1" class="img-fluid h-100 w-100"></div>
+                 </div>
+               </div>
+             </div>
+            </div>
+           </div>
+           <div class="item shadow-sm ">
+            <div class="row">
+             <div class="col-12">
+               <div class="card pb-5">
+                 <div class="card-body">
+                   <div class="text-black fw-semibold theme2Heading d-flex align-items-center justify-content-center">San Francisco, California <a href="#" class="text-decoration-none d-flex align-items-center justify-content-center stretched-link"><span class="icon d-inline-flex align-items-center ps-2"><img src="assets/img/Main-page/Forward.svg" alt="Forward" class="h-100 w-100 "></span></a></div>
+                   <div class="igs-image pt-5 d-flex align-items-center justify-content-center mx-auto"><img src="./assets/img/Main-page/igs1.svg" alt="igs1" class="img-fluid h-100 w-100"></div>
+                 </div>
+               </div>
+             </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <div class="row py-4 mx-0">
+      <div class="center-btn text-center"><a href="#" class="text-decoration-none btn Custom-btn">View All</a></div>
+    </div>
+  </div>
+</div>
 
+<!-- Our Services  -->
+<div class="container-fluid py-5 bg-light ourServices">
+  <div class="container">
+    <div class="row pb-5 ">
+      <div class="col-12 ">
+        <div class="main-heading fw-bold text-center ">Our Services</div>
+      </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-6">
+          <div class="accordion border-0 shadow-none" id="accordionExample">
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div  class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/User2.svg" alt="Counsel: Research programs and understand career goals" class="w-100 h-100"></span></div>                  
+                  <span>  Counsel: Research programs and understand career goals</span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                  <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 my-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <div class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/CreditCard.svg" alt="Funds: Bank loans, Scholarships and Grants" class="w-100 h-100"></span></div>
+                  <span> Funds: Bank loans, Scholarships and Grants</span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                  <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <div class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/People.svg" alt="Pre-departure: Preparing to leave" class="w-100 h-100"></span></div>
+                  <span> Pre-departure: Preparing to leave</span>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                  <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-6">
+            <div class="accordion  border-0 shadow-none" id="accordionExample">
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <div class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/User2.svg" alt="Counsel: Research programs and understand career goals" class="w-100 h-100"></span></div>
+                     <span>Counsel: Research programs and understand career goals</span>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                    <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 my-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/Map1.svg" alt="  Visa: Apply for student visa and visa counseling  " class="w-100 h-100"></span></div>
+                    <span>Funds: Bank loans, Scholarships and Grants </span>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                    <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button border-0 Sub-title-heading text-black fw-semibold shadow-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                    <div class="user text-decoration-none d-flex align-items-center justify-content-center rounded-circle me-3"><span class="icon d-inline-flex"><img src="assets/img/Main-page/File.svg" alt="Learn: Standardized test preparation" class="w-100 h-100"></span></div>
+                     <span>Learn: Standardized test preparation</span>
+                  </button>
+                </h2>
+                <div id="collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="pera text-black mb-3">At Indo Global Studies, we help students with their higher education needs by understanding their career goals. After all, aligning your education to meet your desired career is important. Our experienced counselors walk our students through the various university and program options based on their academic background, financial leverage, existing work experiences and skill-set to best align their decision for a desired career outcome. No matter the country, university or field of education, we offer it all in one place</div>
+                    <div class=""><a href="#" class="text-decoration-none btn Custom-btn">View Details </a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<!-- Parents Say -->
+<div class="container-fluid py-5 parentsSay">
+  <div class="container">
+    <div class="row pb-5 ">
+      <div class="col-12 ">
+        <div class="main-heading fw-bold text-center ">What Parents Say</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 studentsSaysection">
+        <div class="card h-100 position-relative py-4 shadow-sm">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/Parent1.svg" alt="Parent1" class="w-100  h-100 img-fluid rounded-circle"></a>
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Parent-2</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 studentsSaysection">
+        <div class="card h-100 position-relative py-4 shadow-sm">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/parent2.svg" alt="Parent1" class="w-100  h-100 img-fluid rounded-circle"></a>
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Parent-3</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 studentsSaysection">
+        <div class="card h-100 position-relative py-4 shadow-sm">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/parent3.svg" alt="Parent1" class="w-100  h-100 img-fluid rounded-circle"></a>
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Parent-4</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 studentsSaysection">
+        <div class="card h-100 position-relative py-4 shadow-sm">
+          <div class="card-body card-section d-flex align-items-center justify-content-center flex-column  gap-3 ">
+            <div class="cardimages rounded-circle  d-flex align-items-center justify-content-center ">
+            <a class="user-img  d-inline-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/Main-page/parent4.svg" alt="Parent1" class="w-100  h-100 img-fluid rounded-circle"></a>
+            </div>
+            <div class="card-content text-center">
+              <div class="Sub-title-heading text-black fw-bold">Parent-5</div>
+              <div class="pera py-2">Lorem ipsum dolor sit amet consectetur. d nulla adipiscing eget cursus elementum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
     <!-- Bootstrap Js -->
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Custom Js -->
     <script src="assets/js/index.js"></script>
+
+<!-- owl-carsoual  -->
+<script src="assets/libs/bootstrap/slider/js/owl.carousel.min.js"></script>
+<script >
+  $('.studentSayowl').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
+//  testimonals
+$('.testimonialsowl').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  navText: ["<img src='./assets/img/Main-page/ChevronRight.svg' class='img-fluid h-100 w-100 p-2'>","<img src='./assets/img/Main-page/Forward.svg' class='img-fluid h-100 w-100 p-2'>"],
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})
+
+// MentorsSayowl
+$('.MentorsSayowl').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  navText: ["<img src='./assets/img/Main-page/ChevronRight.svg' class='img-fluid h-100 w-100 p-2'>","<img src='./assets/img/Main-page/Forward.svg' class='img-fluid h-100 w-100 p-2'>"],
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:3
+      }
+  }
+})
+
+
+// igs partner
+$('.igsPartnerowl').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  dots:false,
+  navText: ["<img src='./assets/img/Main-page/ChevronRight.svg' class='img-fluid h-100 w-100 p-2'>","<img src='./assets/img/Main-page/Forward.svg' class='img-fluid h-100 w-100 p-2'>"],
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})
+
+</script>
+
+
+
+
+    
 </body>
 </html>

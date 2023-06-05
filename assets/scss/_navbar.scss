@@ -1,0 +1,217 @@
+.navbar {
+    height: 86px;
+    & .logo{
+        width: 149px;
+    }
+  & .icons-nav{
+    & .offcanvas-btn-nav{
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    & a{
+        width: 24px;
+        height: 24px;
+    }
+  }
+    & .navbar-offcanvas{
+        & .offcanvas-header{
+            & .offcanvas-logo{
+                width: 100px;
+            }
+        }
+        & .navbar-nav {
+            & .nav-item{
+                & .nav-link{
+                    font-size: 16px !important;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: $theme1 !important;
+                    }
+                    &.active{
+                        color: $theme1 !important;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin navbar-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin navbar-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin navbar-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin navbar-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin navbar-mixin-min-xxl() {}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin navbar-mixin-max-xs() {
+    .navbar {
+        height: auto;
+        & .logo{
+            width: 100px;
+        }
+      & .icons-nav{
+        & .offcanvas-btn-nav{
+            &:focus{
+           
+            }
+        }
+        & a{
+           
+        }
+      }
+        & .navbar-offcanvas{
+            & .offcanvas-header{
+                & .offcanvas-logo{
+              
+                }
+            }
+            & .navbar-nav {
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                         
+                        }
+                        &.active{
+                     
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin navbar-mixin-max-sm() {
+    .navbar {
+
+        & .logo{
+          
+        }
+      & .icons-nav{
+        & .offcanvas-btn-nav{
+            &:focus{
+           
+            }
+        }
+        & a{
+           
+        }
+      }
+        & .navbar-offcanvas{
+            & .offcanvas-header{
+                & .offcanvas-logo{
+              
+                }
+            }
+            & .navbar-nav {
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                         
+                        }
+                        &.active{
+                     
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin navbar-mixin-max-md() {
+    .navbar {
+        & .logo{
+          
+        }
+      & .icons-nav{
+        & .offcanvas-btn-nav{
+            &:focus{
+           
+            }
+        }
+        & a{
+           
+        }
+      }
+        & .navbar-offcanvas{
+            & .offcanvas-header{
+                & .offcanvas-logo{
+              
+                }
+            }
+            & .navbar-nav {
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                         
+                        }
+                        &.active{
+                     
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin navbar-mixin-max-lg() {
+    .navbar {
+    
+        & .logo{
+          width: 130px;
+        }
+      & .icons-nav{
+        & .offcanvas-btn-nav{
+            &:focus{
+           
+            }
+        }
+        & a{
+           
+        }
+      }
+        & .navbar-offcanvas{
+            & .offcanvas-header{
+                & .offcanvas-logo{
+              
+                }
+            }
+            & .navbar-nav {
+                & .nav-item{
+                    & .nav-link{
+                       
+                        &:hover{
+                         
+                        }
+                        &.active{
+                     
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Large devices (large desktops, less than 1400px)
+@mixin navbar-mixin-max-xl() {}
