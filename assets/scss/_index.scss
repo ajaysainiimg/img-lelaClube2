@@ -17,9 +17,9 @@
         }
         & .serach-2{
             background-color: $theme1;
-            outline: 1px solid $theme1;
-            height: 50px;
-            width: 50px;
+            outline: 1px solid #000;
+            height: 68px;
+            width: 67px ;
             right: 0;
         }
     }
@@ -28,23 +28,45 @@
         color: $theme2;
         line-height: 45px;
     }
+    & .Custom-btn{
+        padding: 14px 12px;
+        font-size: 18px;
+    }
   }
 //   talk-export
 .talk-export {
-    // background-image: url(../img/Main-page/talk-bg.svg);
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
 
     & .talk-export-section{
         & .white-gray-section{
             background: linear-gradient(270deg, #F8EFF0 48.13%, #F8EFF0 48.15%);
+            min-height: 156px;
+            
+            & .main-heading{
+                font-size: 34px;
+            }
         }
         & .red-section{
             background-color: $theme1;
+            min-height: 156px;
+
+            & .sub-heading{
+                & .icon{
+                    width: 34px;
+                    height: 30px;
+                }
+            }
+           
         }
         & .redSection2{
             background-color:#8C060E;
+            min-height: 156px;
+            & .sub-heading{
+                & .icon{
+                    width: 34px;
+                    height: 30px;
+                }
+            }
+            
         }
     }
 }
@@ -89,6 +111,10 @@
             & br{
                 display: none;
             }
+        }
+        & .Custom-btn{
+            padding:8px 10px;
+            font-size: 16px;
         }
       }
     //   talk-export
@@ -232,13 +258,10 @@
 
 // Popular Seachers
 .popularSeachers{
-    .main-heading {
-        font-size: 20px;
-    }
     & .PopularSection{
         & .PopularImage{
             width: 105px;
-            height: 47px;
+            height:100%;
 
             & .inner-data{
                 & .Sub-title-heading{
@@ -428,7 +451,7 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    top: 91px;
+                    top: 146px;
                     left: 38px;
                     height: 52px;
                     width: 56px;
@@ -448,15 +471,15 @@
                     z-index: 22;
                 }
                 & .platform-images{
-                    max-width:334px ;
-                    max-height:504px ;
+                    max-width:100%;
+                    max-height:518px ;
                     &::before{
                         position: absolute;
                         content: '';
                         background-color: #EEDCDC;
                         bottom: 0;
                         left: 0;
-                        width: 370px;
+                        width: 100%;
                         height: 347px;
                         border-radius: 25px;
                         z-index: -1;
@@ -464,6 +487,9 @@
                 }
             }
             & .sub-heading {
+                font-size: 25px;
+            }
+            & .pera{
                 font-size: 18px;
             }
         }
@@ -486,14 +512,11 @@
 // X-Small devices (portrait phones, less than 576px)
 @mixin platformSuports-mixin-max-xs() {
     .platformSuports{
-        & .main-heading{
-            font-size: 22px;
-        }
         & .nav-tabs{
             & .nav-item{
     
                 & .nav-link{
-                    padding: 7px 14px !important;
+                 
                     &.active{
                        
                     }
@@ -505,19 +528,23 @@
             & .tab-pane{
                 & .platform-dots{
                     &::after{
-                       display: none;
+                    
                     }
                     &::before{
-                        display: none;
+                     
                     }
                     & .platform-images{
-                        max-width: 247px;
-                        max-height: 341px;
+                     
                         &::before{
-                            width: 275px;
-                            height: 256px;
+                           
                         }
                     }
+                }
+                & .sub-heading {
+                   
+                }
+                & .pera{
+                    
                 }
             }
          }
@@ -625,10 +652,10 @@
                       
                     }
                     & .platform-images{
-                        max-width: 310px;
+                        max-width: 100%;
                         max-height: 431px;
                         &::before{
-                            width: 308px;
+                            width: 100%;
                             height: 315px;
                         }
                     }
@@ -1252,8 +1279,8 @@
             height: 191px;
         }
         & .video-img{
-            width: 50px;
-            height: 50px;
+            width: 56px;
+            height: 56px;
             background-color: $theme1;
             position: absolute;
             top: 39%;
@@ -1261,7 +1288,7 @@
             transform: translateX(-50%);
             & .icon{
                 width: 15px;
-                height: 15px;
+                height: 17px;
             }
         }
 
@@ -1624,16 +1651,16 @@
             max-height: 414px;
         }
         & .video-img{
-            width: 50px;
-            height: 50px;
+            width: 78px;
+            height: 78px;
             background-color: $theme1;
             position: absolute;
             top: 42%;
             left: 50%;
             transform: translateX(-50%);
             & .icon{
-                width: 15px;
-                height: 15px;
+                width: 29px;
+                height: 29px;
             }
          
         }
@@ -2288,8 +2315,8 @@
                     }
                     & .user{
                         & .icon{
-                            width: 50px;
-                            height: 50px;
+                            width: 60px;
+                            height: 60px;
                           
                             background: #F5CDD0 !important;
                             filter: grayscale(1);

@@ -21,7 +21,7 @@
 }
 
 .sub-heading{
-  font-size: 24px;
+  font-size: 24.62px;
   & span{
     color: $theme1;
 }
@@ -34,18 +34,23 @@
 }
 .pera{
   font-size: 14px;
+  color: $theme2;
 }
 .Sub-title-heading{
-  font-size: 17px;
+  font-size: 20px;
 
 }
 .theme1Heading{
   color: $theme1;
   font-size: 16px;
+
 }
 .theme2Heading{
   color: $theme2;
   font-size: 16px;
+  & span{
+    color: $theme2;
+  }
 }
 .icon{
   height: 24px;

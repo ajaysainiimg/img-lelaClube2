@@ -1,9 +1,10 @@
 .Custom-btn{
     background-color:$theme1 ;
     border: 1px solid $theme1;
-    padding: 7px 25px;
+    padding: 7px 31.5px;
     font-size: 16px;
     color: $theme3;
+    font-weight: 500;
     transition: all 0.3s ease-in-out;
 
     &:hover{
@@ -31,4 +32,9 @@
         color: $theme1;
         background-color:$theme3 ;
     }
+}
+
+.pageBtn{
+    padding: 14px 37px;
+    font-size: 18px;
 }
