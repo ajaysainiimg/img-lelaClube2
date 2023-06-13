@@ -1,4 +1,4 @@
-$('.studentSayowl').owlCarousel({
+$('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
@@ -10,7 +10,7 @@ $('.studentSayowl').owlCarousel({
             items:3
         },
         1000:{
-            items:4
+            items:5
         }
     }
 })

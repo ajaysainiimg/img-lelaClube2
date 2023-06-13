@@ -5,54 +5,41 @@
   background-color: rgba($black, 0);
 }
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
+  height: 1px;
   background-color: rgba($black, 0);
 }
 ::-webkit-scrollbar-thumb {
   background-color: $theme2;
 }
+.btn-close {
 
-// custom class 
-.hero-title{
-  font-size: 28px;
-  & span{
-      color: $theme1;
-  }
+  filter:invert(1);
 }
-
-.sub-heading{
-  font-size: 24.62px;
-  & span{
-    color: $theme1;
-}
-}
-.main-heading{
-  font-size: 36px;
-  & span{
-    color: $theme1;
-  }
-}
-.pera{
-  font-size: 14px;
-  color: $theme2;
-}
-.Sub-title-heading{
-  font-size: 20px;
-
-}
-.theme1Heading{
-  color: $theme1;
-  font-size: 16px;
-
-}
-.theme2Heading{
-  color: $theme2;
-  font-size: 16px;
-  & span{
-    color: $theme2;
-  }
+body{
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
 }
 .icon{
-  height: 24px;
-  width: 24px;
+  width: 20px;
+  height: 20px;
+}
+.head{
+  font-size: 38px;
+  line-height: 46px;
+  color: $theme1;
+}
+.heading{
+  font-size: 32px;
+  line-height: 38px;
+  color: $theme3;
+}
+.subheading{
+  font-size: 18px;
+  line-height: 26px;
+  color: $theme3;
+}
+.text{
+  font-size: 14px;
+  color: $theme3;
 }

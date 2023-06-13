@@ -1,907 +1,450 @@
-// hero-section 
-.hero-section{
-    background-image: url(../img/Main-page/hero_bg.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    &::after{
-        position: absolute;
-        content: '';
-        background: linear-gradient(90.23deg, rgba(247, 247, 247, 0) 22.8%, rgba(247, 247, 247, 0.24) 32.07%, #F9F8F8 44.24%, #F7F7F7 93.26%);
+
+// heroSection
+.heroSection{
+    & .heroImg{
+        width: 300px;
+        height: 90%;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    & .mainCol{
+        width: 400px;
+        & .animationHero{
+            height: 250px;
+            & img{
+                animation: move 25s;
+                animation-iteration-count: infinite;
+                animation-delay: 3s;
+                position: relative;
+              
+            }
+            @keyframes move {
+                0% {
+                    top: 0px;
+                }
+    
+                6% {
+                    top: calc(-100% - 1.5rem);
+                }
+    
+                12% {
+                    top: calc(-100% - 1.5rem);
+                }
+    
+                18% {
+                    top: calc(-200% - 3rem);
+                }
+    
+                24% {
+                    top: calc(-200% - 3rem);
+                }
+                30% {
+                    top: calc(-300% - 4.5rem);
+                }
+    
+                36% {
+                    top: calc(-300% - 4.5rem);
+                }
+    
+                42% {
+                    top: calc(-400% - 6rem);
+                }
+    
+                48% {
+                    top: calc(-400% - 6rem);
+                }
+                60% {
+                    top: calc(-500% - 7.5rem);
+                }
+    
+                66% {
+                    top: calc(-500% - 7.5rem);
+                }
+    
+                72% {
+                    top: calc(-600% - 9rem);
+                }
+    
+                78% {
+                    top: calc(-600% - 9rem);
+                }
+    
+                84% {
+                    top: 0px;
+                }
+    
+                100% {
+                    top: 0px;
+                }
+                
+            }
+        }
+        & .heroContent{
+            font-size: 15px;
+            line-height: 27px;
+            color: $theme3;
+        }
+    }
+    & .heroRightImg{
+        width: 300px;
+        & .routetStar{
+            height: 180px;
+            width: 100%;
+            left:-45px ;
+            animation: rotate 5s linear infinite;
+            transition: 0.3s ease-in-out;
+        }
         
-    }
-    & .input-group {
-        & .place-holder{
-            font-size: 14px;
-        }
-        & .serach-2{
-            background-color: $theme1;
-            outline: 1px solid #000;
-            height: 68px;
-            width: 67px ;
-            right: 0;
-        }
-    }
-    & .sub-title {
-        font-size: 38px;
-        color: $theme2;
-        line-height: 45px;
-    }
-    & .Custom-btn{
-        padding: 14px 12px;
-        font-size: 18px;
-    }
-  }
-//   talk-export
-.talk-export {
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
 
-    & .talk-export-section{
-        & .white-gray-section{
-            background: linear-gradient(270deg, #F8EFF0 48.13%, #F8EFF0 48.15%);
-            min-height: 156px;
-            
-            & .main-heading{
-                font-size: 34px;
+            25% {
+                transform: rotate(90deg);
             }
-        }
-        & .red-section{
-            background-color: $theme1;
-            min-height: 156px;
 
-            & .sub-heading{
-                & .icon{
-                    width: 34px;
-                    height: 30px;
-                }
+            50% {
+                transform: rotate(180deg);
             }
-           
-        }
-        & .redSection2{
-            background-color:#8C060E;
-            min-height: 156px;
-            & .sub-heading{
-                & .icon{
-                    width: 34px;
-                    height: 30px;
-                }
+
+            75% {
+                transform: rotate(270deg);
             }
-            
+
+            100% {
+                transform: rotate(360deg);
+            }
+
         }
     }
+
 }
 
 // Small devices (landscape phones, 576px and up)
-@mixin index-page-mixin-min-sm() {
- 
-}
+@mixin heroSection-mixin-min-sm() {}
 // Medium devices (tablets, 768px and up)
-@mixin index-page-mixin-min-md() {}
+@mixin heroSection-mixin-min-md() {}
 // Large devices (desktops, 992px and up)
-@mixin index-page-mixin-min-lg() {}
+@mixin heroSection-mixin-min-lg() {}
 // X-Large devices (large desktops, 1200px and up)
-@mixin index-page-mixin-min-xl() {}
+@mixin heroSection-mixin-min-xl() {}
 // XX-Large devices (larger desktops, 1400px and up)
-@mixin index-page-mixin-min-xxl() {}
+@mixin heroSection-mixin-min-xxl() {}
 
-// X-Small devices (portrait phones, less than 576px)
-@mixin index-page-mixin-max-xs() {
-    .hero-section{
-      
-        &::after{
-           
+// X-Large devices (large desktops, less than 1400px)
+@mixin heroSection-mixin-max-xl() {
+    .heroSection{
+        & .heroImg{
+         
+            &:hover{
+             
+            }
         }
-        .hero-title{
-            font-size: 18px;
-            & span{
+        & .mainCol{
+          
+            & .animationHero{
+           
+                & img{
+                }
               
             }
-          }
-        & .input-group {
-            & .place-holder{
-               
+            & .heroContent{
+              
             }
-            & .serach-2{
+        }
+        & .heroRightImg{
+           
+            & .routetStar{
           
             }
         }
-        & .sub-title {
-            font-size: 27px;
-            line-height: 31px;
-            & br{
+    
+    }
+}
+// Large devices (desktops, less than 1200px)
+@mixin heroSection-mixin-max-lg() {
+    .heroSection{
+        & .heroImg{
+            height: 74%;
+            &:hover{
+             
+            }
+        }
+        & .mainCol{
+          
+            & .animationHero{
+           
+                & img{
+                }
+              
+            }
+            & .heroContent{
+              
+            }
+        }
+        & .heroRightImg{
+           
+            & .routetStar{
+                height: 120px;
+                right: 20px;
+            }
+        }
+    
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin heroSection-mixin-max-md() {
+    .heroSection{
+        & .heroImg{
+          display: none;
+            &:hover{
+             
+            }
+        }
+        & .mainCol{
+            width: 700px;
+            & .animationHero{
+                height: 200px;
+                & img{
+                }
+              
+            }
+            & .heroContent{
+              
+            }
+            & .heroBtn{
+                width: 289px;
+            }
+        }
+        & .heroRightImg{
+           
+            & .routetStar{
                 display: none;
-            }
-        }
-        & .Custom-btn{
-            padding:8px 10px;
-            font-size: 16px;
-        }
-      }
-    //   talk-export
-    .talk-export {
-     
-    
-        & .talk-export-section{
-            & .red-section{
                 
             }
         }
+    
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin heroSection-mixin-max-sm() {
+    .heroSection{
+        & .heroImg{
+        
+            &:hover{
+             
+            }
+        }
+        & .mainCol{
+            width: 476px;
+            & .animationHero{
+                
+                & img{
+                }
+              
+            }
+            & .heroContent{
+              
+            }
+            & .heroBtn{
+                
+            }
+        }
+        & .heroRightImg{
+           
+            & .routetStar{
+          
+            }
+        }
+    
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin heroSection-mixin-max-xs() {
+    .heroSection{
+        & .heroImg{
+        
+            &:hover{
+             
+            }
+        }
+        & .mainCol{
+            width: 380px;
+            & .animationHero{
+                height: 150px;
+                & img{
+                }
+              
+            }
+            & .heroContent{
+                font-size: 13px;
+                line-height: 22px;
+            }
+            & .heroBtn{
+                width: 255px;
+                height: 55px;
+            }
+        }
+        & .heroRightImg{
+           
+            & .routetStar{
+          
+            }
+        }
+    
     }
 }
 
-// Small devices (landscape phones, less than 768px)
-@mixin index-page-mixin-max-sm() {
-    .hero-section{
-      
-        &::after{
-           
+
+// detailSection
+.detailSection{
+    & .detailHeading{
+        font-size: 36px;
+        line-height: 44px;
+        color: $theme3;
+        & .icon{
+            top: -4px;
+            right: 17px;
         }
-        & .input-group {
-            & .place-holder{
-               
-            }
-            & .serach-2{
-          
+    }
+    & .detailText{
+        font-size: 18px;
+        line-height: 25px;
+        color: $theme3;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin detailSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin detailSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin detailSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin detailSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin detailSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin detailSection-mixin-max-xl() {
+    .detailSection{
+        & .detailHeading{
+         
+            & .icon{
+              
             }
         }
-        & .sub-title {
-          
-        }
-      }
-    //   talk-export
-    .talk-export {
-     
-    
-        & .talk-export-section{
-            & .red-section{
-                
-            }
+        & .detailText{
+         
         }
     }
 }
-// Medium devices (tablets, less than 992px)
-@mixin index-page-mixin-max-md() {
-    .hero-section{
-      
-        &::after{
-           
-        }
-        & .input-group {
-            & .place-holder{
-               
-            }
-            & .serach-2{
-          
-            }
-        }
-        & .sub-title {
+// Large devices (desktops, less than 1200px)
+@mixin detailSection-mixin-max-lg() {
+    .detailSection{
+        & .detailHeading{
             font-size: 30px;
-            line-height: 35px;
-        }
-      }
-    //   talk-export
-    .talk-export {
-     
-    
-        & .talk-export-section{
-            & .red-section{
-                
+            line-height: 40px;
+            & .icon{
+              
             }
         }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin index-page-mixin-max-lg() {
-    .hero-section{
-      
-        &::after{
-           
-        }
-        & .input-group {
-            & .place-holder{
-               
-            }
-            & .serach-2{
-          
-            }
-        }
-        & .sub-title {
-          
-        }
-      }
-    //   talk-export
-    .talk-export {
-     
-    
-        & .talk-export-section{
-
-            & .hero-title {
-                font-size: 25px;
-            }
-          
-            & .red-section{
-                
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin index-page-mixin-max-xl() {
-    .hero-section{
-      
-        &::after{
-           
-        }
-        & .input-group {
-            & .place-holder{
-               
-            }
-            & .serach-2{
-          
-            }
-        }
-        & .sub-title {
-          
-        }
-      }
-    //   talk-export
-    .talk-export {
-     
-    
-        & .talk-export-section{
-            & .red-section{
-                
-            }
-        }
-    }
-}
-
-// Popular Seachers
-.popularSeachers{
-    & .PopularSection{
-        & .PopularImage{
-            width: 105px;
-            height:100%;
-
-            & .inner-data{
-                & .Sub-title-heading{
-                    font-size: 18px;
-                }
-                & .theme2Heading{
-                    & .icon{
-                        max-width: 24px;
-                        max-height: 24px;
-                    }
-                }
-             
-            }
-        }
-        
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin popularSeachers-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin popularSeachers-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin popularSeachers-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin popularSeachers-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin popularSeachers-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin popularSeachers-mixin-max-xs() {
-    .popularSeachers{
-        & .main-heading{
-            font-size: 22px;
-        }
-        & .PopularSection{
-            & .PopularImage{
-               
-    
-                & .inner-data{
-                    & .theme2Heading{
-                        & .icon{
-                           
-                        }
-                    }
-                 
-                }
-            }
-            
-        }
-    }
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin popularSeachers-mixin-max-sm() {
-    .popularSeachers{
-        .main-heading {
-            font-size: 25px;
-        }
-        & .PopularSection{
-            & .PopularImage{
-                
-    
-                & .inner-data{
-                    & .theme2Heading{
-                        & .icon{
-                      
-                        }
-                    }
-                 
-                }
-            }
-            
+        & .detailText{
+            font-size: 15px;
+            line-height: 22px;
         }
     }
 }
 // Medium devices (tablets, less than 992px)
-@mixin popularSeachers-mixin-max-md() {
-    .popularSeachers{
-        
-      
-        & .PopularSection{
-            
-            & .PopularImage{
+@mixin detailSection-mixin-max-md() {
+    .detailSection{
+        & .detailHeading{
+            font-size: 27px;
+            line-height: 38px;
+            & .icon{
+              
             }
-            & .inner-data{
-                  
-                & .Sub-title-heading {
-                 
-                
-                }
-                & .theme1Heading{
-                    
-                }
-                & .theme2Heading{
-                  
-                    & .icon{
-                     
-                    }
-                }
-                & .section-border{
-                   display: none;
-                }
-             
-            }
-            
+        }
+        & .detailText{
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }
-// Large devices (desktops, less than 1200px)
-@mixin popularSeachers-mixin-max-lg() {
-    .popularSeachers{
-        
-      
-        & .PopularSection{
-            
-            & .PopularImage{
-            }
-            & .inner-data{
-                   
-                & .Sub-title-heading {
-                    font-size: 15px !important;
-                
-                }
-                & .theme1Heading{
-                    font-size: 14px;
-                }
-                & .theme2Heading{
-                    font-size: 14px;
-                    & .icon{
-                     
-                    }
-                }
-             
-            }
-            
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin popularSeachers-mixin-max-xl() {
-    .popularSeachers{
-        & .PopularSection{
-            & .PopularImage{
-             
-    
-                & .inner-data{
-                    & .theme2Heading{
-                        & .icon{
-                     
-                        }
-                    }
-                 
-                }
-            }
-            
-        }
-    }
-}
-
-// platformSuports 
-.platformSuports{
-    & .nav-tabs{
-        & .nav-item{
-
-            & .nav-link{
-                padding: 7px 100px !important;
-                background-color: #EEDCDC;
-                &.active{
-                    background-color: $theme1;
-                    color: $theme3 !important;
-                    border-radius: 5px !important;
-                }
-            }
-        }
-    }
-
-     & .tab-content{
-        & .tab-pane{
-            & .platform-dots{
-                &::after{
-                    position: absolute;
-                    content: '';
-                    background-image: url(../img/Main-page/Frame.svg) !important;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    top: 146px;
-                    left: 38px;
-                    height: 52px;
-                    width: 56px;
-                    z-index: 2;
-                }
-                &::before{
-                    position: absolute;
-                    content: '';
-                    background-image: url(../img/Main-page/Frame.svg) !important;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    bottom: 16px;
-                    right: 20px;
-                    height: 52px;
-                    width: 56px;
-                    z-index: 22;
-                }
-                & .platform-images{
-                    max-width:100%;
-                    max-height:518px ;
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        background-color: #EEDCDC;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 347px;
-                        border-radius: 25px;
-                        z-index: -1;
-                    }
-                }
-            }
-            & .sub-heading {
-                font-size: 25px;
-            }
-            & .pera{
-                font-size: 18px;
-            }
-        }
-     }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin platformSuports-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin platformSuports-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin platformSuports-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin platformSuports-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin platformSuports-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin platformSuports-mixin-max-xs() {
-    .platformSuports{
-        & .nav-tabs{
-            & .nav-item{
-    
-                & .nav-link{
-                 
-                    &.active{
-                       
-                    }
-                }
-            }
-        }
-    
-         & .tab-content{
-            & .tab-pane{
-                & .platform-dots{
-                    &::after{
-                    
-                    }
-                    &::before{
-                     
-                    }
-                    & .platform-images{
-                     
-                        &::before{
-                           
-                        }
-                    }
-                }
-                & .sub-heading {
-                   
-                }
-                & .pera{
-                    
-                }
-            }
-         }
-    }
-}
-
 // Small devices (landscape phones, less than 768px)
-@mixin platformSuports-mixin-max-sm() {
-    .main-heading {
-        font-size: 25px;
-    }
-    .platformSuports{
-        & .nav-tabs{
-            & .nav-item{
-    
-                & .nav-link{
-                    padding: 8px 39px !important;
-                    &.active{
-                    
-                    }
-                }
+@mixin detailSection-mixin-max-sm() {
+    .detailSection{
+        & .detailHeading{
+         font-size: 26px;
+         line-height: 33px;
+            & .icon{
+              right: 78px;
             }
         }
-    
-         & .tab-content{
-            & .tab-pane{
-                & .platform-dots{
-                    &::after{
-                        left: 112px;
-                    }
-                    &::before{
-                        right: 63px;
-                    }
-                    & .platform-images{
-                        
-                        &::before{
-                      
-                        }
-                    }
-                }
-            }
-         }
+        & .detailText{
+         
+        }
     }
 }
-// Medium devices (tablets, less than 992px)
-@mixin platformSuports-mixin-max-md() {
-    .platformSuports{
-      
-        & .nav-tabs{
-            & .nav-item{
-    
-                & .nav-link{
-                    padding: 8px 51px !important;
-                    &.active{
-                     
-                    }
-                }
+// X-Small devices (portrait phones, less than 576px)
+@mixin detailSection-mixin-max-xs() {
+    .detailSection{
+        & .detailHeading{
+         font-size: 24px;
+            & .icon{
+              right: 0px;
             }
         }
-    
-         & .tab-content{
-            & .tab-pane{
-                & .platform-dots{
-                    &::after{
-                        left: 151px;
-                    }
-                    &::before{
-                        right: 147px;
-                    }
-                    & .platform-images{
-                       
-                        &::before{
-                 
-                        }
-                    }
-                }
-            }
-         }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin platformSuports-mixin-max-lg() {
-    .platformSuports{
-        
-        & .nav-tabs{
-            ::-webkit-scrollbar-track {max-height: 50%; height: 10%;}
-            & .nav-item{
-             
-                & .nav-link{
-                
-                    &.active{
-                  
-                    }
-                }
-            }
+        & .detailText{
+         
         }
-    
-         & .tab-content{
-            & .tab-pane{
-                & .platform-dots{
-                    &::after{
-                   
-                    }
-                    &::before{
-                      
-                    }
-                    & .platform-images{
-                        max-width: 100%;
-                        max-height: 431px;
-                        &::before{
-                            width: 100%;
-                            height: 315px;
-                        }
-                    }
-                }
-            }
-         }
     }
 }
-// X-Large devices (large desktops, less than 1400px)
-@mixin platformSuports-mixin-max-xl() {
-    .platformSuports{
-        & .nav-tabs{
-            & .nav-item{
-    
-                & .nav-link{
-                   
-                    &.active{
-                      
-                    }
-                }
-            }
-        }
-    
-         & .tab-content{
-            & .tab-pane{
-                & .platform-dots{
-                    &::after{
-                     
-                    }
-                    &::before{
-                       
-                    }
-                    & .platform-images{
-                    
-                        &::before{
-                       
-                        }
-                    }
-                }
-            }
-         }
-    }
-}
-// howToPlay
-.howToPlay{
-    & .howToPlaySection{
-       background-color: $theme1;
-        width: 100%;
-        height: 460px;
 
-        &::after{
-            position: absolute;
-            content: '';
-            background-image: url(../img/Main-page/Frame.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 52px;
-            width: 56px;
-            top: -23px;
-            left: -23px;
-        }
-        &::before{
-            position: absolute;
-            content: '';
-            background-image: url(../img/Main-page/Frame.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 52px;
-            width: 56px;
-            bottom: -25px;
-            right: -25px;
-        }
-        & .howToPlayImg{
-                background-image: url(../img/Main-page/howtoplay.svg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 690px;
-                height: 460px;
-            & .videoplay{
-                height: 100px;
-                width: 100px;
-                background-color: $theme1;
-                border: 3px solid $theme3;
+// carouselSection
+.carouselSection{
+    & .carouselOwlCard{
+        & .item{
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                & .cardArrow{
+                    & img{
+                        transform: rotate(46deg);
+                    }
+                }
+            }
+            & .carouselCard{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                
+            }
+            & .carouselContent{
                 position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translateX(-50%);
-
-             
-            }
-        }
-    }
-}
-
-
-// Small devices (landscape phones, 576px and up)
-@mixin howToPlay-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin howToPlay-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin howToPlay-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin howToPlay-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin howToPlay-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin howToPlay-mixin-max-xs() {
-    .howToPlay{
-        & .main-heading{
-            font-size: 22px;
-        }
-        & .howToPlaySection{
-            height: 197px;
-    
-            &::after{
-           display: none;
-            }
-            &::before{
-            display: none;
-            }
-            & .howToPlayImg{
-                width: 259px;
-                height: 197px;
-                & .videoplay{
-                    height: 50px;
-                    width: 50px;
-                }
-
-            }
-        }
-    }
-    
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin howToPlay-mixin-max-sm() {
-    .howToPlay{
-        .main-heading {
-            font-size: 25px;
-        }
-        & .howToPlaySection{
-            height: 392px;
-    
-            &::after{
-           
-            }
-            &::before{
-            
-            }
-            & .howToPlayImg{
-                width: 521px;
-                height: 392px;
-                & .videoplay{
-                    height: 80px;
-                    width: 80px;
-                }
-            }
-        }
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin howToPlay-mixin-max-md() {
-    .howToPlay{
-        & .howToPlaySection{
-         
-    
-            &::after{
-
-            }
-            &::before{
-          
-            }
-            & .howToPlayImg{
-                   
-                & .videoplay{
-                  
-                 
-                }
-            }
-        }
-    }
-    
-}
-// Large devices (desktops, less than 1200px)
-@mixin howToPlay-mixin-max-lg() {
-    .howToPlay{
-      
-        & .howToPlaySection{
-        
-    
-            &::after{
-      
-            }
-            &::before{
-        
-            }
-            & .howToPlayImg{
-            
-                & .videoplay{
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #0F0F0F 92.71%);
               
-                 
-                }
+                 & .cardArrow{
+                    width: 58px;
+                    height: 58px;
+                    margin-right: 30px;
+                    background-color: $theme1;
+                    & img{
+                        padding: 14px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                 }
             }
-        }
-    }
-    
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin howToPlay-mixin-max-xl() {
-    .howToPlay{
-        & .howToPlaySection{
-         
-    
-            &::after{
-             
+            & .cardDetails{
+                padding: 80px 15px 50px 27px;
             }
-            &::before{
-              
-            }
-            & .howToPlayImg{
-                    
-                & .videoplay{
-                 
-    
-                 
-                }
-            }
-        }
-    }
-    
-}
-
-// studentSay 
-
-.studentSay{
-    & .studentsSaysection{
-        & .owl-stage-outer{
-            padding: 0 !important;
-           
         }
         & .owl-dots{
             display: flex;
@@ -911,1513 +454,2040 @@
             padding-top: 35px;
      
             & .owl-dot {
-                background-color: $theme1 !important;
-                width: 10px;
-                height: 5px;
+                background-color: $theme3;
+                width: 8px;
+                height: 8px;
                 border-radius: 35px;
                 &.active{
-                    width: 25px;
-                height: 5px;
+                    background-color: $theme1 !important;
                 }
             }
         }
-        & .card{
-           &.active{
-            background-color:#FCFCFC;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin carouselSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin carouselSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin carouselSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin carouselSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin carouselSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin carouselSection-mixin-max-xl() {
+    .carouselSection{
+        & .carouselOwlCard{
+            & .item{
+               
+                &:hover{
+                    & .cardArrow{
+                        & img{
+                        
+                        }
+                    }
+                }
+                & .carouselCard{
+                    
+                }
+                & .carouselContent{
+           
+                  
+                     & .cardArrow{
+                     
+                        & img{
+                        
+                        }
+                     }
+                }
+                & .cardDetails{
+                   
+                }
+            }
+            & .owl-dots{
+               
+         
+                & .owl-dot {
+                
+                    &.active{
+                 
+                    }
+                }
+            }
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin carouselSection-mixin-max-lg() {
+    .carouselSection{
+        & .carouselOwlCard{
+            & .item{
+               
+                &:hover{
+                    & .cardArrow{
+                        & img{
+                        
+                        }
+                    }
+                }
+                & .carouselCard{
+                    
+                }
+                & .carouselContent{
+           
+                  
+                     & .cardArrow{
+                     
+                        & img{
+                        
+                        }
+                     }
+                }
+                & .cardDetails{
+                   
+                }
+            }
+            & .owl-dots{
+               
+         
+                & .owl-dot {
+                
+                    &.active{
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin carouselSection-mixin-max-md() {
+    .carouselSection{
+        & .carouselOwlCard{
+            & .item{
+               
+                &:hover{
+                    & .cardArrow{
+                        & img{
+                        
+                        }
+                    }
+                }
+                & .carouselCard{
+                    
+                }
+                & .carouselContent{
+           
+                  
+                     & .cardArrow{
+                     
+                        & img{
+                        
+                        }
+                     }
+                }
+                & .cardDetails{
+                   
+                }
+            }
+            & .owl-dots{
+               
+         
+                & .owl-dot {
+                
+                    &.active{
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin carouselSection-mixin-max-sm() {
+    .carouselSection{
+        & .carouselOwlCard{
+            & .item{
+               
+                &:hover{
+                    & .cardArrow{
+                        & img{
+                        
+                        }
+                    }
+                }
+                & .carouselCard{
+                    
+                }
+                & .carouselContent{
+           
+                  
+                     & .cardArrow{
+                     
+                        & img{
+                        
+                        }
+                     }
+                }
+                & .cardDetails{
+                   
+                }
+            }
+            & .owl-dots{
+               
+         
+                & .owl-dot {
+                
+                    &.active{
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin carouselSection-mixin-max-xs() {
+    .carouselSection{
+        & .carouselOwlCard{
+            & .item{
+               
+                &:hover{
+                    & .cardArrow{
+                        & img{
+                        
+                        }
+                    }
+                }
+                & .carouselCard{
+                    
+                }
+                & .carouselContent{
+           
+                  
+                     & .cardArrow{
+                     
+                        & img{
+                            padding: 18px;
+                        }
+                     }
+                }
+                & .cardDetails{
+                    padding: 70px 15px 27px 27px;
+                   & .heading{
+                    font-size: 26px;
+                    line-height: 33px;
+                   }
+                }
+            }
+            & .owl-dots{
+               
+         
+                & .owl-dot {
+                
+                    &.active{
+                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+// stapSection
+.stapSection{
+    & .stapImg{
+    //    max-width: 470px;
+    //    width: 100%;
+    //     height: 100%;
+    }
+    & .stapContent{
+        & .heading{
+            font-size: 42px;
+            line-height: 51px;
+            color: $theme1;
+        }
+        & .text{
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin stapSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin stapSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin stapSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin stapSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin stapSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin stapSection-mixin-max-xl() {
+    .stapSection{
+        & .stapImg{
+         
+        }
+        & .stapContent{
+            & .heading{
+          
+            }
+            & .text{
+              
+            }
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin stapSection-mixin-max-lg() {
+    .stapSection{
+        & .head{
+            font-size: 32px;
+        }
+        & .stapImg{
+            
+        }
+        & .stapContent{
+            & .heading{
+                font-size: 38px;
+            }
+            & .text{
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin stapSection-mixin-max-md() {
+    .stapSection{
+        & .head{
+            font-size: 28px;
+            line-height: 34px;
+        }
+        & .stapImg{
+         
+        }
+        & .stapContent{
+            & .heading{
+                font-size: 32px;
+                line-height: 38px;
+            }
+            & .text{
+              
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin stapSection-mixin-max-sm() {
+    .stapSection{
+        & .head{
+            font-size: 25px;
+            line-height: 32px;
+        }
+        & .stapImg{
+         
+        }
+        & .stapContent{
+            & .heading{
+                font-size: 28px;
+                line-height: 35px;
+            }
+            & .text{
+              font-size: 14px;
+              line-height: 23px;
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin stapSection-mixin-max-xs() {
+    .stapSection{
+        & .stapImg{
+        
+        }
+        & .stapContent{
+            & .heading{
+                font-size: 26px;
+                line-height: 33px;
+            }
+            & .text{
+              
+            }
+        }
+    }
+}
+
+// mobileSection
+.mobileSection{
+    & .head{
+        font-size: 48px;
+        line-height: 62px;
+        & .icon{
+            top: -22px;
+        }
+    }
+    & .text{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    & .mobileSectionBtn{
+        & .heroBtn{
+            background-color: #0F0F0F !important;
+        }
+    }
+    & .mobileUsers{
+        & .hoverImg{
+            transition: all 0.3s ease-in-out;
+             &:hover{
+            transform: scale(1.1);
+            }
+        
+       }
+ 
+        & .user1{
+            width: 130px;
+            height: 130px;
+            top: 0;
+            right: 55px;
+        }
+        & .user2{
+            width: 220px;
+            height: 220px;
+            top: 90px;
+            right: 190px;
+        }
+        & .user3{
+            width: 160px;
+            height: 160px;
+            top: 160px;
+            right: 10px;
+        }
+        & .user4{
+            width: 199px;
+            height: 200px;
+            bottom: 0px;
+            right: 123px;
+        }
+        & .user5{
+            width: 60px;
+            height: 60px;
+            bottom: 100px;
+            right: 25px;
+            animation-name: float_down_up;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes float_down_up {
+                0% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1
+                }
+            
+                50% {
+                    transform: translateY(-30px);
+                    transform: translateY(-30px);
+                    opacity: 1
+                }
+            
+                100% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1
+                }
+
+        }
+    }
+        & .user6{
+            width: 135px;
+            height:135px;
+            top: 20px;
+        }
+        & .user7{
+            width: 120px;
+            height: 120px;
+            top: 180px;
+            left: 30px;
+        }
+        & .user8{
+            width: 220px;
+            height: 220px;
+            bottom: 0px;
+            left: 20px;
+        }
+        & .user9{
+            width: 180px;
+            height: 180px;
+            top: 200px;
+            right: 33px;
+        }
+        & .user10{
+            width: 140px;
+            height: 140px;
+            top: 50px;
+            right: 88px;
+        }
+        & .user11{
+            width: 60px;
+            height: 60px;
+            top: 175px;
+            left: 157px;
+            animation-name: float_down_up;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes float_down_up {
+                0% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1
+                }
+            
+                50% {
+                    transform: translateY(-30px);
+                    transform: translateY(-30px);
+                    opacity: 1
+                }
+            
+                100% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1
+                }
+
+        }
+        }
+        & .user12{
+            width: 60px;
+            height: 60px;
+            top: 0px;
+            right: 218px;
+            animation-name: float_up_down;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes float_up_down {
+                0% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            
+                50% {
+                    transform: translateY(30px);
+                    transform: translateY(30px);
+                    opacity: 1;
+                }
+            
+                100% {
+                    transform: translateY(0);
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+    
+            }
+        }
+        
+
+    }
+    & .mobileImg{
+        width: 100%;
+        height: 520px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin mobileSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin mobileSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin mobileSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin mobileSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin mobileSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin mobileSection-mixin-max-xl() {
+    .mobileSection{
+        & .head{
+     
+            & .icon{
+             
+            }
+        }
+        & .text{
+         
+        }
+        & .mobileSectionBtn{
+            & .heroBtn{
+              
+            }
+        }
+        & .mobileUsers{
+            & .hoverImg{
+             
+                 &:hover{
+              
+                }
+            
            }
+     
+            & .user1{
+          
+            }
+            & .user2{
+             
+            }
+            & .user3{
+             
+            }
+            & .user4{
+            
+            }
+            & .user5{
+             
+           
+        }
+            & .user6{
+               
+            }
+            & .user7{
+              
+            }
+            & .user8{
+        
+            }
+            & .user9{
+          
+            }
+            & .user10{
+             
+            }
+            & .user11{
+               
+    
+         
+            }
+            & .user12{
+              
+            }
+            
+        }
+        & .mobileImg{
+         
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin mobileSection-mixin-max-lg() {
+    .mobileSection{
+        & .head{
+            font-size: 35px;
+            line-height: 42px;
+            & .icon{
+             
+            }
+        }
+        & .text{
+            font-size: 17px;
+            line-height: 25px;
+        }
+        & .mobileSectionBtn{
+            & .heroBtn{
+              
+            }
+        }
+        & .mobileUsers{
+            & .hoverImg{
+             
+                 &:hover{
+              
+                }
+            
+           }
+     
+            & .user1{
+                width: 90px;
+                height: 90px;
+                top: 0;
+                right: 33px;
+            }
+            & .user2{
+                width: 198px;
+                height: 196px;
+                right: 151px;
+            }
+            & .user3{
+                width: 120px;
+                height: 120px;
+                top: 117px;
+             
+            }
+            & .user4{
+                width: 150px;
+                height: 150px;
+                bottom: 0px;
+                right: 75px;
+            }
+            & .user5{
+             
+           
+        }
+            & .user6{
+                width: 90px;
+                height: 90px;
+            }
+            & .user7{
+                width: 100px;
+                height: 100px;
+                top: 120px;
+                left: 30px;
+            }
+            & .user8{
+                width: 180px;
+                height: 180px;
+            }
+            & .user9{
+                width: 120px;
+                height: 120px;
+                top: 200px;
+                right: 22px;
+            }
+            & .user10{
+                width: 120px;
+                height: 120px;
+                top: 50px;
+                right: 64px;
+            }
+            & .user11{
+               
+    
+         
+            }
+            & .user12{
+                right: 198px;
+            }
+            
+        }
+        & .mobileImg{
+            height: 436px;
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin mobileSection-mixin-max-md() {
+    .mobileSection{
+        & .head{
+     
+            & .icon{
+             
+            }
+        }
+        & .text{
+         
+        }
+        & .mobileSectionBtn{
+            & .heroBtn{
+              
+            }
+        }
+        & .mobileUsers{
+            & .hoverImg{
+             
+                 &:hover{
+              
+                }
+            
+           }
+     
+            & .user1{
+          
+            }
+            & .user2{
+             
+            }
+            & .user3{
+             
+            }
+            & .user4{
+            
+            }
+            & .user5{
+             
+           
+        }
+            & .user6{
+               
+            }
+            & .user7{
+              
+            }
+            & .user8{
+        
+            }
+            & .user9{
+          
+            }
+            & .user10{
+             
+            }
+            & .user11{
+               
+    
+         
+            }
+            & .user12{
+              
+            }
+            
+        }
+        & .mobileImg{
+         
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin mobileSection-mixin-max-sm() {
+    .mobileSection{
+        & .head{
+     font-size: 32px;
+     line-height: 40px;
+            & .icon{
+             
+            }
+        }
+        & .text{
+            font-size: 16px;
+            line-height: 25px;
+        }
+        & .mobileSectionBtn{
+            & .heroBtn{
+              
+            }
+        }
+        & .mobileUsers{
+            & .hoverImg{
+             
+                 &:hover{
+              
+                }
+            
+           }
+     
+            & .user1{
+          
+            }
+            & .user2{
+             
+            }
+            & .user3{
+             
+            }
+            & .user4{
+            
+            }
+            & .user5{
+             
+           
+        }
+            & .user6{
+               
+            }
+            & .user7{
+              
+            }
+            & .user8{
+        
+            }
+            & .user9{
+          
+            }
+            & .user10{
+             
+            }
+            & .user11{
+               
+    
+         
+            }
+            & .user12{
+              
+            }
+            
+        }
+        & .mobileImg{
+         
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin mobileSection-mixin-max-xs() {
+    .mobileSection{
+        & .head{
+            font-size: 26px;
+            line-height: 33px;
+            & .icon{
+             
+            }
+        }
+        & .text{
+         
+        }
+        & .mobileSectionBtn{
+            & .heroBtn{
+                width: 255px;
+            }
+        }
+        & .mobileSectionImg{
+           
+        }
+        & .mobileUsers{
+            & .hoverImg{
+             
+                 &:hover{
+              
+                }
+            
+           }
+     
+            & .user1{
+          
+            }
+            & .user2{
+             
+            }
+            & .user3{
+             
+            }
+            & .user4{
+            
+            }
+            & .user5{
+             
+           
+        }
+            & .user6{
+               
+            }
+            & .user7{
+              
+            }
+            & .user8{
+        
+            }
+            & .user9{
+          
+            }
+            & .user10{
+             
+            }
+            & .user11{
+               
+    
+         
+            }
+            & .user12{
+              
+            }
+            
+        }
+        & .mobileImg{
+         
+        }
+    }
+}
+
+// testimonialSliser
+
+.testimonialSection{
+    & .head{
+        font-size: 48px;
+        line-height: 62px;
+        & .icon{
+            top: -22px;
+        }
+    }
+    & .testimonialOwl{
+    & .owl-stage-outer {
+            padding: 0;
+        }
+        & .testimonialCard{
+          
+            & .testimonialBox{
+                background-color: $theme1;
+                height:44%;
+                width: 100%;
+    
+                & .sliderText{
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin testimonialSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin testimonialSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin testimonialSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin testimonialSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin testimonialSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin testimonialSection-mixin-max-xl() {
+    .testimonialSection{
+        & .head{
+        
+            & .icon{
+              
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+              
+            }
+            & .testimonialCard{
+              
+                & .testimonialBox{
+                  
+        
+                    & .sliderText{
+                      
+                    }
+                }
+            }
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin testimonialSection-mixin-max-lg() {
+    .testimonialSection{
+        & .head{
+            font-size: 35px;
+            line-height: 42px;
+            & .icon{
+               
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+                
+            }
+            & .testimonialCard{
+              
+                & .testimonialBox{
+                 
+        
+                    & .sliderText{
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin testimonialSection-mixin-max-md() {
+    .testimonialSection{
+        & .head{
+           
+            & .icon{
+               
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+                
+            }
+            & .testimonialCard{
+              
+                & .testimonialBox{
+                 
+        
+                    & .sliderText{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin testimonialSection-mixin-max-sm() {
+    .testimonialSection{
+        & .head{
+            font-size: 26px;
+            line-height: 35px;
+            & .icon{
+               
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+                
+            }
+            & .testimonialCard{
+              
+                & .testimonialBox{
+                 
+        
+                    & .sliderText{
+                        font-size: 16px;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin testimonialSection-mixin-max-xs() {
+    .testimonialSection{
+        & .head{
+            font-size: 26px;
+            line-height: 33px;
+            & .icon{
+               
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+                
+            }
+            & .testimonialCard{
+              
+                & .testimonialBox{
+                 
+        
+                    & .sliderText{
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+// makePayment
+.makePayment{
+    & .qrPaymentImg{
+        width: 620px;
+        height: auto;
+        transition: all 0.7s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    & .content-container{
+        background: rgba(255,255,255,.6);
+        box-shadow: 0 3px 4px #00000010;
+        border: 1px solid #ffffff;
+        opacity: 1;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        z-index: 2;
+        margin-left: -203px;
+        width: 650px;
+        & .subheading{
+            font-size: 20px;
+        }
+        & .heading{
+            font-size: 48px;
+            line-height: 57px;
+        }
+    
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin makePayment-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin makePayment-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin makePayment-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin makePayment-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin makePayment-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin makePayment-mixin-max-xl() {
+    .makePayment{
+        & .qrPaymentImg{
+         
+            &:hover{
+               
+            }
+        }
+        & .content-container{
+        
+            & .subheading{
+              
+            }
+            & .heading{
+               
+            }
+        
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin makePayment-mixin-max-lg() {
+    .makePayment{
+        & .qrPaymentImg{
+         
+            &:hover{
+               
+            }
+        }
+        & .content-container{
+        
+            & .subheading{
+                font-size: 19px;
+            }
+            & .heading{
+                font-size: 38px;
+                line-height: 46px;
+            }
+        
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin makePayment-mixin-max-md() {
+    .makePayment{
+        & .qrPaymentImg{
+         width: 100%;
+            &:hover{
+               
+            }
+        }
+        & .content-container{
+            margin-left: 0px;
+            width: 100%;
+            & .subheading{
+              
+            }
+            & .heading{
+                font-size: 36px;
+                line-height: 39px;
+            }
+        & .heroBtn{
+            width: 281px;
+        }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin makePayment-mixin-max-sm() {
+    .makePayment{
+        & .qrPaymentImg{
+         
+            &:hover{
+               
+            }
+        }
+        & .content-container{
+        
+            & .subheading{
+              
+            }
+            & .heading{
+               
+            }
+        
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin makePayment-mixin-max-xs() {
+    .makePayment{
+        & .qrPaymentImg{
+         
+            &:hover{
+               
+            }
+        }
+        & .content-container{
+        
+            & .subheading{
+              font-size: 18px;
+            }
+            & .heading{
+               font-size: 28px;
+               line-height: 35px;
+            }
+        & .heroBtn{
+            width: 255px;
+            height: 55px;
+        }
+        }
+    }
+}
+
+// instagram
+.instagram{
+    & .head{
+        font-size: 48px;
+        line-height: 62px;
+        & .icon{
+            & img{
+                position: absolute;
+                top: -4px;
+            }
+        }
+    }
+    & .instagramOwl{
+        & .item{
+            & .instaImg{
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@mixin instagram-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin instagram-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin instagram-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin instagram-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin instagram-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin instagram-mixin-max-xl() {
+    .instagram{
+        & .head{
+       
+            & .icon{
+              
+            }
+        }
+        & .instagramOwl{
+            & .item{
+                & .instaImg{
+                
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin instagram-mixin-max-lg() {
+    .instagram{
+        & .head{
+            font-size: 35px;
+            line-height: 42px;
+            & .icon{
+              
+            }
+        }
+        & .heroBtn{
+            width: 300px;
+        }
+        & .instagramOwl{
+            & .item{
+                & .instaImg{
+                
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin instagram-mixin-max-md() {
+    .instagram{
+        & .head{
+       
+            & .icon{
+              
+            }
+        }
+        & .instagramOwl{
+            & .item{
+                & .instaImg{
+                
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin instagram-mixin-max-sm() {
+    .instagram{
+        & .head{
+       
+            & .icon{
+              
+            }
+        }
+        & .instagramOwl{
+            & .item{
+                & .instaImg{
+                
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin instagram-mixin-max-xs() {
+    .instagram{
+        & .head{
+            font-size: 26px;
+            line-height: 33px;
+            & .icon{
+              
+            }
+        }
+        & .heroBtn{
+            width: 335px;
+            height: 60px;
+        }
+        & .instagramOwl{
+            & .item{
+                & .instaImg{
+                
+                    &:hover{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// marqueeSection
+.marqueeSection{
+        & .servicesTicker{
+            height: 103px;
+            background-color: $theme1;
+       
+            & .marqueeImg{
+                width: 248px;
+                height: 100%;
+                // -webkit-animation: loop 20s infinite linear;
+                // animation: loop 5s infinite linear;
+            //    transform:  translate(176.493%, 0%) translate3d(0px, 0px, 0px);
+            }
+        }
+        // @keyframes loop {
+        //     100% {
+        //       -webkit-transform: translateX(-100%);
+        //       transform: translateX(-100%);
+        //     }
+        //   }
+    
+}
+
+
+
+// becomeSection
+.becomeSection{
+    & .starImg{
+        width: 180px;
+        height: 180px;
+    }
+    & .becomeImgHero{
+        height: 100%;
+        width: 303px;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transform: scale(0.9);
+        }
+    }
+    & .heroContent{
+        font-size: 17px;
+        line-height: 21px;
+    }
+    & .text{
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin becomeSection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin becomeSection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin becomeSection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin becomeSection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin becomeSection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin becomeSection-mixin-max-xl() {
+    .becomeSection{
+        & .heroContent{
+         
+        }
+        & .text{
+          
+        }
+    }
+
+}
+// Large devices (desktops, less than 1200px)
+@mixin becomeSection-mixin-max-lg() {
+    .becomeSection{
+        & .starImg{
+        
+        }
+        & .becomeImgHero{
+            width: 230px;
+            &:hover{
+            }
+        }
+        & .heroContent{
+         
+        }
+        & .text{
+          
+        }
+    }
+}
+// Medium devices (tablets, less than 992px)
+@mixin becomeSection-mixin-max-md() {
+    .becomeSection{
+        & .head{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        & .starImg{
+       
+        }
+        & .becomeImgHero{
+            width: 310px;
+           
+            &:hover{
+                
+            }
+        }
+        & .heroContent{
+           
+        }
+        & .text{
+          
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin becomeSection-mixin-max-sm() {
+    .becomeSection{
+        & .head{
+            font-size: 28px;
+            line-height: 37px;
+        }
+        & .starImg{
+       
+        }
+        & .becomeImgHero{
+            width: 280px;
+           
+            &:hover{
+                
+            }
+        }
+        & .heroContent{
+         
+        }
+        & .text{
+          
+        }
+    }
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin becomeSection-mixin-max-xs() {
+    .becomeSection{
+        & .heroContent{
+         
+        }
+        & .text{
+          
+        }
+    }
+}
+// formsubmitsection
+.formsubmitsection{
+    & .card{
+        & .cardSection{
+            position: relative;
             &::before{
                 position: absolute;
-                content: '';
-                background-image: url(../img/Main-page/colon.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 24px;
-                width: 30px;
-                top: -12px;
-                left: 50%;
-                transform: translateX(-50%);
+                content: "";
+                border: 1px solid #6643a3;
+                width: 78%;
+                height: 1px;
+                right:80px ;
+            }
+            & .dotsLine{
+             
+             
+                & .dotCircle{
+                    & li{
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $theme2;
+                        position: relative;
+                   
+                    }
+                }
+            }
+            & .topImage{
+                right: 10px;
+                max-width: 237px;
+            }
+            & .heartImage{
+                position: absolute;
+                top: 0;
+                right: 0;
+                max-width: 100px;
+                transform: translate(-242px, -110px);
+            
+            }
+        }
+        & .card-body{
+            & .heading{
+                font-size: 24px;
+            }
+            & .text{
+                font-size: 14px;
+
+            }
+            & .form-control{
+                border: 1px solid $black;
+                line-height: 24px;
+                font-size: 14px;
+                &:focus{
+                    border-color:$black ;
+                }
+            }
+            & .SocialMediaLinks{
+              & .form-label{
+                font-size: 14px;
+              }
+                & .text{
+                    font-size: 10px;
+                }
+            }
+            & .heroBtn{
+                width: 256px;
+                height: 41px;
+            }
+
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin formsubmitsection-mixin-min-sm() {}
+// Medium devices (tablets, 768px and up)
+@mixin formsubmitsection-mixin-min-md() {}
+// Large devices (desktops, 992px and up)
+@mixin formsubmitsection-mixin-min-lg() {}
+// X-Large devices (large desktops, 1200px and up)
+@mixin formsubmitsection-mixin-min-xl() {}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin formsubmitsection-mixin-min-xxl() {}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin formsubmitsection-mixin-max-xl() {
+    .formsubmitsection{
+        & .card{
+            & .cardSection{
+           
+                &::before{
+                }
+                & .dotsLine{
+                 
+                 
+                    & .dotCircle{
+                        & li{
+                       
+                        }
+                    }
+                }
+                & .topImage{
+                    
+                }
+                & .heartImage{
+                
+                }
             }
             & .card-body{
-                & .cardimages{
-                    width: 50px ;
-                    height: 50px ;
-                   
-                    & .user-img{
-                        width: 50px !important;
-                        height: 50px !important;
-
-                    }
-                }
-                & .card-content{
-                    & .card-subheading{
-                        color: $theme1;
-                    }
-                    & .card-subheading-title{
-                        color: $theme2;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin studentSay-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin studentSay-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin studentSay-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin studentSay-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin studentSay-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin studentSay-mixin-max-xs() {
-    .studentSay{
-        & .main-heading{
-            font-size: 22px;
-        }
-        & .studentsSaysection{
-            & .owl-stage-outer{
-             
-               
-            }
-            & .owl-dots{
-           
-         
-                & .owl-dot {
-               
-                    &.active{
-                     
-                    }
-                }
-            }
-            & .card{
-               &.active{
-           
-               }
-                &::before{
-                   
-                }
-                & .card-body{
-                    & .cardimages{
-                       
-                       
-                        & .user-img{
-                          
-    
-                        }
-                    }
-                    & .card-content{
-                        & .card-subheading{
-                         
-                        }
-                        & .card-subheading-title{
-                           
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin studentSay-mixin-max-sm() {
-    .main-heading {
-        font-size: 25px;
-    }
-    .studentSay{
-        & .studentsSaysection{
-            & .owl-stage-outer{
-               
-               
-            }
-            & .owl-dots{
-        
-         
-                & .owl-dot {
-                    
-                    &.active{
-                  
-                    }
-                }
-            }
-            & .card{
-               &.active{
-               
-               }
-                &::before{
-                   
-                }
-                & .card-body{
-                    & .cardimages{
-                      
-                       
-                        & .user-img{
-                         
-    
-                        }
-                    }
-                    & .card-content{
-                        & .card-subheading{
-                          
-                        }
-                        & .card-subheading-title{
-                        
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin studentSay-mixin-max-md() {
-   
-    .studentSay{
-        & .studentsSaysection{
-            & .owl-stage-outer{
-              
-               
-            }
-            & .owl-dots{
-               
-         
-                & .owl-dot {
-       
-                    &.active{
-                     
-                    }
-                }
-            }
-            & .card{
-               &.active{
-             
-               }
-                &::before{
+                & .heading{
                 
                 }
-                & .card-body{
-                    & .cardimages{
-                    
-                       
-                        & .user-img{
-                     
-    
-                        }
-                    }
-                    & .card-content{
-                        & .card-subheading{
-                          
-                        }
-                        & .card-subheading-title{
-                   
-                        }
+                & .text{
+                }
+                & .form-control{
+                 
+                    &:focus{
+                      
                     }
                 }
+                & .SocialMediaLinks{
+                  & .form-label{
+                 
+                  }
+                    & .text{
+                     
+                    }
+                }
+                & .heroBtn{
+                   
+                }
+    
             }
         }
     }
     
+
 }
 // Large devices (desktops, less than 1200px)
-@mixin studentSay-mixin-max-lg() {
-    .studentSay{
-        & .studentsSaysection{
-            & .owl-stage-outer{
-              
-               
-            }
-            & .owl-dots{
-            
-         
-                & .owl-dot {
-                
-                    &.active{
-                  
-                    }
-                }
-            }
-            & .card{
-               &.active{
-                
-               }
+@mixin formsubmitsection-mixin-max-lg() {
+    .formsubmitsection{
+        & .card{
+            & .cardSection{
+           
                 &::before{
+                    width: 74%;
+                }
+                & .dotsLine{
+                 
+                 
+                    & .dotCircle{
+                        & li{
+                       
+                        }
+                    }
+                }
+                & .topImage{
                     
                 }
-                & .card-body{
-                    & .cardimages{
+                & .heartImage{
+                
+                }
+            }
+            & .card-body{
+                & .heading{
+                
+                }
+                & .text{
+                }
+                & .form-control{
+                 
+                    &:focus{
                       
-                       
-                        & .user-img{
-                          
-    
-                        }
-                    }
-                    & .card-content{
-                        & .card-subheading{
-                     
-                        }
-                        & .card-subheading-title{
-                         
-                        }
                     }
                 }
+                & .SocialMediaLinks{
+                  & .form-label{
+                 
+                  }
+                    & .text{
+                     
+                    }
+                }
+                & .heroBtn{
+                   
+                }
+    
             }
         }
     }
-    
 }
-// X-Large devices (large desktops, less than 1400px)
-@mixin studentSay-mixin-max-xl() {
-    .studentSay{
-        & .studentsSaysection{
-            & .owl-stage-outer{
-            
-               
-            }
-            & .owl-dots{
-             
-         
-                & .owl-dot {
-                 
-                    &.active{
-                 
-                    }
-                }
-            }
-            & .card{
-               &.active{
-              
-               }
+// Medium devices (tablets, less than 992px)
+@mixin formsubmitsection-mixin-max-md() {
+    .formsubmitsection{
+        & .card{
+            & .cardSection{
+           
                 &::before{
-               
+                    width: 62%;
                 }
-                & .card-body{
-                    & .cardimages{
+                & .dotsLine{
+                 
+                 
+                    & .dotCircle{
+                        & li{
                        
+                        }
+                    }
+                }
+                & .topImage{
+                    max-width: 217px;
+                }
+                & .heartImage{
+                
+                }
+            }
+            & .card-body{
+                & .heading{
+                
+                }
+                & .text{
+                }
+                & .form-control{
+                 
+                    &:focus{
+                      
+                    }
+                }
+                & .SocialMediaLinks{
+                  & .form-label{
+                 
+                  }
+                    & .text{
+                     
+                    }
+                }
+                & .heroBtn{
+                   
+                }
+    
+            }
+        }
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@mixin formsubmitsection-mixin-max-sm() {
+    .formsubmitsection{
+        & .card{
+            & .cardSection{
+           
+                &::before{
+                }
+                & .dotsLine{
+                 
+                 
+                    & .dotCircle{
+                        & li{
                        
-                        & .user-img{
-                           
-    
-                        }
-                    }
-                    & .card-content{
-                        & .card-subheading{
-                        
-                        }
-                        & .card-subheading-title{
-                           
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-
-// Testimonials
-.Testimonials{
-
-    & .owl-stage-outer{
-        padding: 0 !important;
-       
-    }
-    & .testimonialsowl{
-        transition: all 0.3s ease-in-out;
-        &:hover{
-            & .owl-nav{
-                & .owl-prev{
-                    left: -40px;
+                & .topImage{
+                    
                 }
-                & .owl-next{
-                    right: -40px;
+                & .heartImage{
+                    max-width: 49px;
+                
                 }
             }
-        }
-        & .owl-nav{
-            display: flex;
-            align-items: center;
-            position: absolute;
-            left: 0;
-            top: 40%;
-            transform: translateY(-50%);
-            transition: all 0.3s ease-in-out;
-           & .owl-prev{
-            position: absolute;
-            left: -15px;
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 30px;
-            height: 30px;
-            top: 8px;
-            transition: all .3s ease-in-out;
-           }
-           & .owl-next{
-            position: absolute;
-            right: -15px;
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 30px;
-            height: 30px;
-            top: 8px;
-            transition: all .3s ease-in-out;
-           }
-        }
-        & .testimonials-images{
-            width:100%;
-            height: 191px;
-        }
-        & .video-img{
-            width: 56px;
-            height: 56px;
-            background-color: $theme1;
-            position: absolute;
-            top: 39%;
-            left: 50%;
-            transform: translateX(-50%);
-            & .icon{
-                width: 15px;
-                height: 17px;
-            }
-        }
-
-    }
-    
-   
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin Testimonials-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin Testimonials-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin Testimonials-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin Testimonials-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin Testimonials-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin Testimonials-mixin-max-xs() {
-    .Testimonials{
-        & .main-heading{
-            font-size: 22px;
-        }
-        & .owl-stage-outer{
-         
-           
-        }
-        & .testimonialsowl{
-            & .owl-nav{
-               
-               & .owl-prev{
-                left: 0;
-               }
-               & .owl-next{
-                right: 0;
-               }
-            }
-            & .testimonials-images{
-              
-            }
-            & .video-img{
-             
-                & .icon{
+            & .card-body{
+                & .heading{
+                
+                }
+                & .text{
+                }
+                & .form-control{
+                 
+                    &:focus{
+                      
+                    }
+                }
+                & .SocialMediaLinks{
+                  & .form-label{
+                 
+                  }
+                    & .text{
+                     
+                    }
+                }
+                & .heroBtn{
                    
                 }
-            }
     
+            }
         }
-        
-       
     }
-    
 }
-
-// Small devices (landscape phones, less than 768px)
-@mixin Testimonials-mixin-max-sm() {
-    .Testimonials{
-        .main-heading {
-            font-size: 25px;
-        }
-        & .owl-stage-outer{
-         
+// X-Small devices (portrait phones, less than 576px)
+@mixin formsubmitsection-mixin-max-xs() {
+    .formsubmitsection{
+        & .card{
+            & .cardSection{
            
-        }
-        & .testimonialsowl{
-            & .owl-nav{
-               
-               & .owl-prev{
-               
-               }
-               & .owl-next{
-               
-               }
+                &::before{
+                    width: 57%;
+                }
+                & .dotsLine{
+                 
+                 
+                    & .dotCircle{
+                        & li{
+                       
+                        }
+                    }
+                }
+                & .topImage{
+                    max-width: 166px;
+                }
+                & .heartImage{
+                    transform: translate(-173px, -103px);
+                     width: 30px;
+                     height: 30px;
+                }
             }
-            & .testimonials-images{
-                
-            }
-            & .video-img{
-             
-                & .icon{
+            & .card-body{
+                & .heading{
+                    font-size: 20px;
+                    line-height: 29px;
+                }
+                & .text{
+                }
+                & .form-control{
+                 
+                    &:focus{
+                      
+                    }
+                }
+                & .SocialMediaLinks{
+                  & .form-label{
+                 
+                  }
+                    & .text{
+                     
+                    }
+                }
+                & .heroBtn{
                    
                 }
-            }
     
-        }
-        
-       
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin Testimonials-mixin-max-md() {
-    .Testimonials{
-        & .owl-stage-outer{
-         
-           
-        }
-        & .testimonialsowl{
-            & .owl-nav{
-              
-               & .owl-prev{
-             
-               }
-               & .owl-next{
-          
-               }
             }
-            & .testimonials-images{
-             
-            }
-            & .video-img{
-             
-                & .icon{
-                 
-                }
-            }
-    
-        }
-        
-       
-    }
-    
-}
-// Large devices (desktops, less than 1200px)
-@mixin Testimonials-mixin-max-lg() {
-    .Testimonials{
-        & .owl-stage-outer{
-            
-           
-        }
-        & .testimonialsowl{
-            & .owl-nav{
-             
-               & .owl-prev{
-              
-               }
-               & .owl-next{
-             
-               }
-            }
-            & .testimonials-images{
-             
-            }
-            & .video-img{
-             
-                & .icon{
-                   
-                }
-            }
-    
-        }
-        
-       
-    }
-    
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin Testimonials-mixin-max-xl() {
-    .Testimonials{
-        & .owl-stage-outer{
-        
-           
-        }
-        & .testimonialsowl{
-            & .owl-nav{
-           
-               & .owl-prev{
-            
-               }
-               & .owl-next{
-           
-               }
-            }
-            & .testimonials-images{
-            
-            }
-            & .video-img{
-                
-                & .icon{
-                   
-                }
-            }
-    
-        }
-        
-       
-    }
-}
-
-
-// popularCountries
-.popularCountries{
-    & .main-heading{
-        &::after{
-            position: absolute;
-            content: '';
-            background-color: $theme1;
-            height: 83px;
-            width: 5px;
-            top: 17px;
-            left: 0;
-        }
-    }
-  
-    & .countries-img{
-        max-width: 100%;
-        max-height: 157px;
-    }
-  
-    
-}
-// Small devices (landscape phones, 576px and up)
-@mixin popularCountries-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin popularCountries-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin popularCountries-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin popularCountries-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin popularCountries-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin popularCountries-mixin-max-xs() {
-    .popularCountries{
-        & .main-heading{
-            font-size: 20px;
-            &::after{
-                height: 32px;
-            }
-        }
-      
-        & .countries-img{
-          
         }
     }
 }
-
-// Small devices (landscape phones, less than 768px)
-@mixin popularCountries-mixin-max-sm() {
-    .popularCountries{
-        & .main-heading{
-            font-size: 25px;
-            &::after{
-                height: 46px;
-                top: 15px;
-            }
-        }
-      
-        & .countries-img{
-          
-        }
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin popularCountries-mixin-max-md() {
-    .popularCountries{
-        & .main-heading{
-            &::after{
-             
-            }
-        }
-      
-        & .countries-img{
-          
-        }
-    }
-    
-}
-// Large devices (desktops, less than 1200px)
-@mixin popularCountries-mixin-max-lg() {
-    .popularCountries{
-        & .main-heading{
-            &::after{
-             
-            }
-        }
-      
-        & .countries-img{
-          
-        }
-    }
-    
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin popularCountries-mixin-max-xl() {
-    .popularCountries{
-        & .main-heading{
-            &::after{
-             
-            }
-        }
-      
-        & .countries-img{
-          
-        }
-    }
-}
-
-// MentorsSay
-
-.mentorsSay{
-    & .owl-stage-outer{
-        padding: 0 !important;
-        position: relative;
-       
-    }
-    & .mentorsSayowl{
-        transition: all 0.3s ease-in-out;
-        &:hover{
-            & .owl-nav{
-                & .owl-prev{
-                    left: -50.50px;
-                }
-                & .owl-next{
-                    right: -50.50px;
-                }
-            }
-        }
-        & .owl-nav{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          
-           & .owl-prev{
-            position: absolute;
-            top: 50%;
-            left: -17.50px;
-            transform: translateY(-50%);
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 35px;
-            height: 35px;
-            transition: all 0.3s ease-in-out;
-            
-           }
-           & .owl-next{
-            position: absolute;
-            top: 50%;
-            right: -17.50px;
-            transform: translateY(-50%);
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 35px;
-            height: 35px;
-            transition: all 0.3s ease-in-out;
-           }
-        }
-        & .MentorsSay-images{
-            max-width: 100%;
-            max-height: 414px;
-        }
-        & .video-img{
-            width: 78px;
-            height: 78px;
-            background-color: $theme1;
-            position: absolute;
-            top: 42%;
-            left: 50%;
-            transform: translateX(-50%);
-            & .icon{
-                width: 29px;
-                height: 29px;
-            }
-         
-        }
+// accoidenSection
+.accoidenSection{
+    & .accoidenImg{
 
     }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin mentorsSay-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin mentorsSay-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin mentorsSay-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin mentorsSay-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin mentorsSay-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin mentorsSay-mixin-max-xs() {
-    .mentorsSay{
-           .main-heading {
-            font-size: 20px;
-        }
-        & .owl-stage-outer{
-     
-           
-        }
-        & .mentorsSayowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                     
-                    }
-                    & .owl-next{
-                        
-                    }
-                }
-            }
-            & .owl-nav{
-          
-              
-               & .owl-prev{
-             
-                
-               }
-               & .owl-next{
-              
-               }
-            }
-            & .MentorsSay-images{
-          
-            }
-            & .video-img{
-              
-                & .icon{
-                  
-                }
-             
-            }
-    
-        }
-    }
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin mentorsSay-mixin-max-sm() {
-    .mentorsSay{
-        .main-heading {
-            font-size: 25px;
-        }
-        & .owl-stage-outer{
-     
-           
-        }
-        & .mentorsSayowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                     
-                    }
-                    & .owl-next{
-                        
-                    }
-                }
-            }
-            & .owl-nav{
-          
-              
-               & .owl-prev{
-             
-                
-               }
-               & .owl-next{
-              
-               }
-            }
-            & .MentorsSay-images{
-          
-            }
-            & .video-img{
-              
-                & .icon{
-                  
-                }
-             
-            }
-    
-        }
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin mentorsSay-mixin-max-md() {
-    .mentorsSay{
-        & .owl-stage-outer{
-     
-           
-        }
-        & .mentorsSayowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                     
-                    }
-                    & .owl-next{
-                        
-                    }
-                }
-            }
-            & .owl-nav{
-          
-              
-               & .owl-prev{
-             
-                
-               }
-               & .owl-next{
-              
-               }
-            }
-            & .MentorsSay-images{
-          
-            }
-            & .video-img{
-              
-                & .icon{
-                  
-                }
-             
-            }
-    
-        }
-    }
-    
-}
-// Large devices (desktops, less than 1200px)
-@mixin mentorsSay-mixin-max-lg() {
-    .mentorsSay{
-        & .owl-stage-outer{
-     
-           
-        }
-        & .mentorsSayowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                     
-                    }
-                    & .owl-next{
-                        
-                    }
-                }
-            }
-            & .owl-nav{
-          
-              
-               & .owl-prev{
-             
-                
-               }
-               & .owl-next{
-              
-               }
-            }
-            & .MentorsSay-images{
-          
-            }
-            & .video-img{
-              
-                & .icon{
-                  
-                }
-             
-            }
-    
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin mentorsSay-mixin-max-xl() {
-    .mentorsSay{
-        & .owl-stage-outer{
-     
-           
-        }
-        & .mentorsSayowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                     
-                    }
-                    & .owl-next{
-                        
-                    }
-                }
-            }
-            & .owl-nav{
-          
-              
-               & .owl-prev{
-             
-                
-               }
-               & .owl-next{
-              
-               }
-            }
-            & .MentorsSay-images{
-          
-            }
-            & .video-img{
-              
-                & .icon{
-                  
-                }
-             
-            }
-    
-        }
-    }
-}
-// IGSPartners 
-.iGSPartners{
-   
-    & .owl-stage-outer{
-        padding: 0 !important;
-        position: relative;
-       
-    }
-    & .igsPartnerowl{
-        transition: all 0.3s ease-in-out;
-        &:hover{
-            & .owl-nav{
-                & .owl-prev{
-                    left: -50.50px;
-                }
-                & .owl-next{
-                    right: -50.50px;
-                }
-            }
-        }
-    
-        & .owl-nav{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          
-           & .owl-prev{
-            & span{
-                
-                background-image: url(../img/Main-page/Forward.svg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-            position: absolute;
-            top: 50%;
-            left: -17.50px;
-            transform: translateY(-50%);
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 35px;
-            height: 35px;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                left: -45px;
-            }
-           }
-           & .owl-next{
-            position: absolute;
-            top: 50%;
-            right: -17.50px;
-            transform: translateY(-50%);
-            background: #F6F8F9;
-            box-shadow: 0px 2.18667px 9.29333px rgba(0, 0, 0, 0.13);
-            border-radius: 50px;
-            width: 35px;
-            height: 35px;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-                right: -45px;
-            }
-
-           }
-        }
-        & .item{ 
-            & .card{
-            transition: all 0.3s ease-in-out;
-            & .igs-image{
-                max-width: 182px;
-                max-height: 55px;
-            }
-            
-         }
-
-          
-        }
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@mixin iGSPartners-mixin-min-sm() {
- 
-}
-// Medium devices (tablets, 768px and up)
-@mixin iGSPartners-mixin-min-md() {}
-// Large devices (desktops, 992px and up)
-@mixin iGSPartners-mixin-min-lg() {}
-// X-Large devices (large desktops, 1200px and up)
-@mixin iGSPartners-mixin-min-xl() {}
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin iGSPartners-mixin-min-xxl() {}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin iGSPartners-mixin-max-xs() {
-    .iGSPartners{
-        .main-heading {
-            font-size: 20px;
-        }
-        & .owl-stage-outer{
-        
-           
-        }
-        & .igsPartnerowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                    
-                    }
-                    & .owl-next{
-                      
-                    }
-                }
-            }
-        
-            & .owl-nav{
-             
-              
-               & .owl-prev{
-                & span{
-               
-                }
-              
-                &:hover{
-                  
-                }
-               }
-               & .owl-next{
-             
-                &:hover{
-                 
-                }
-    
-               }
-            }
-            & .item{ 
-                & .card{
-            
-                & .igs-image{
-                  
-                }
-                
-             }
-    
-              
-            }
-        }
-    }
-   
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin iGSPartners-mixin-max-sm() {
-    .iGSPartners{
-        .main-heading {
-            font-size: 25px;
-        }
-        & .owl-stage-outer{
-        
-           
-        }
-        & .igsPartnerowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                    
-                    }
-                    & .owl-next{
-                      
-                    }
-                }
-            }
-        
-            & .owl-nav{
-             
-              
-               & .owl-prev{
-                & span{
-               
-                }
-              
-                &:hover{
-                  
-                }
-               }
-               & .owl-next{
-             
-                &:hover{
-                 
-                }
-    
-               }
-            }
-            & .item{ 
-                & .card{
-            
-                & .igs-image{
-                  
-                }
-                
-             }
-    
-              
-            }
-        }
-    }
-    
-}
-// Medium devices (tablets, less than 992px)
-@mixin iGSPartners-mixin-max-md() {
-    .iGSPartners{
-   
-        & .owl-stage-outer{
-        
-           
-        }
-        & .igsPartnerowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                    
-                    }
-                    & .owl-next{
-                      
-                    }
-                }
-            }
-        
-            & .owl-nav{
-             
-              
-               & .owl-prev{
-                & span{
-               
-                }
-              
-                &:hover{
-                  
-                }
-               }
-               & .owl-next{
-             
-                &:hover{
-                 
-                }
-    
-               }
-            }
-            & .item{ 
-                & .card{
-            
-                & .igs-image{
-                  
-                }
-                
-             }
-    
-              
-            }
-        }
-    }
-}
-// Large devices (desktops, less than 1200px)
-@mixin iGSPartners-mixin-max-lg() {
-    .iGSPartners{
-   
-        & .owl-stage-outer{
-        
-           
-        }
-        & .igsPartnerowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                    
-                    }
-                    & .owl-next{
-                      
-                    }
-                }
-            }
-        
-            & .owl-nav{
-             
-              
-               & .owl-prev{
-                & span{
-               
-                }
-              
-                &:hover{
-                  
-                }
-               }
-               & .owl-next{
-             
-                &:hover{
-                 
-                }
-    
-               }
-            }
-            & .item{ 
-                & .card{
-            
-                & .igs-image{
-                  
-                }
-                
-             }
-    
-              
-            }
-        }
-    }
-}
-// X-Large devices (large desktops, less than 1400px)
-@mixin iGSPartners-mixin-max-xl() {
-    .iGSPartners{
-   
-        & .owl-stage-outer{
-        
-           
-        }
-        & .igsPartnerowl{
-        
-            &:hover{
-                & .owl-nav{
-                    & .owl-prev{
-                    
-                    }
-                    & .owl-next{
-                      
-                    }
-                }
-            }
-        
-            & .owl-nav{
-             
-              
-               & .owl-prev{
-                & span{
-               
-                }
-              
-                &:hover{
-                  
-                }
-               }
-               & .owl-next{
-             
-                &:hover{
-                 
-                }
-    
-               }
-            }
-            & .item{ 
-                & .card{
-            
-                & .igs-image{
-                  
-                }
-                
-             }
-    
-              
-            }
-        }
-    }
-}
-
-// ourServices 
-.ourServices{
     & .accordion{
-        & .accordion-item{
+        & .accordion-item {
             & .accordion-header{
                 & .accordion-button{
-                    transition: all 0.3s ease-in-out;
+                    font-size: 27px;
+                    line-height: 38px;
+                    color: $theme1;
                     &::after{
-                        background-image: none;
+                        background-image: url(../img/Main-page/plus.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        height: 15px;
+                        width: 15px;
                     }
-                    &:not(.collapsed){
-                        background-color:$theme3 !important;
-                        & .user{
-                            & .icon{
-                                filter: none !important;
-                            }
-                            
-                        }
-                        &::after{
-                            background-image: url(../img/Main-page/CollapseArrow.svg);
-                            transform: none;
-                        }
-                       
-                    }
-                    &:focus{
-                        box-shadow: none;
-                    }
-                    & .user{
-                        & .icon{
-                            width: 60px;
-                            height: 60px;
-                          
-                            background: #F5CDD0 !important;
-                            filter: grayscale(1);
-                            transition: all 0.3s ease-in-out;
-                           
-                        }
-
+                    &::not(.collapsed)::after{
+                        background-image: url(../img/Main-page/minus.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        height: 5px;
+                        width: 15px;
                     }
                 }
             }
         }
     }
 }
+
 
 // Small devices (landscape phones, 576px and up)
-@mixin ourServices-mixin-min-sm() {
- 
-}
+@mixin accoidenSection-mixin-min-sm() {}
 // Medium devices (tablets, 768px and up)
-@mixin ourServices-mixin-min-md() {}
+@mixin accoidenSection-mixin-min-md() {}
 // Large devices (desktops, 992px and up)
-@mixin ourServices-mixin-min-lg() {}
+@mixin accoidenSection-mixin-min-lg() {}
 // X-Large devices (large desktops, 1200px and up)
-@mixin ourServices-mixin-min-xl() {}
+@mixin accoidenSection-mixin-min-xl() {}
 // XX-Large devices (larger desktops, 1400px and up)
-@mixin ourServices-mixin-min-xxl() {}
+@mixin accoidenSection-mixin-min-xxl() {}
 
-// X-Small devices (portrait phones, less than 576px)
-@mixin ourServices-mixin-max-xs() {
-    .ourServices{
-        .main-heading {
-            font-size: 20px;
+// X-Large devices (large desktops, less than 1400px)
+@mixin accoidenSection-mixin-max-xl() {
+    .accoidenSection{
+        & .accoidenImg{
+    
         }
         & .accordion{
-            & .accordion-item{
+            & .accordion-item {
                 & .accordion-header{
                     & .accordion-button{
-                      
+                  
                         &::after{
-                          
+                     
                         }
-                        &:not(.collapsed){
-                            & .user{
-                                & .icon{
-                                    width: 40px;
-                                    height: 40px;
-                                }
-                            }
-                            &::after{
-                             
-                            }
-                        }
-                        &:focus{
-                           
-                        }
-                        & .user{
-                            & .icon{
-                               
-                            }
-    
+                        &::not(.collapsed)::after{
+                       
                         }
                     }
                 }
             }
         }
     }
-   
-}
+    
 
-// Small devices (landscape phones, less than 768px)
-@mixin ourServices-mixin-max-sm() {
-    .ourServices{
-        .main-heading {
-            font-size: 25px;
+}
+// Large devices (desktops, less than 1200px)
+@mixin accoidenSection-mixin-max-lg() {
+    .accoidenSection{
+        & .accoidenImg{
+    
         }
         & .accordion{
-            & .accordion-item{
+            & .accordion-item {
                 & .accordion-header{
                     & .accordion-button{
-                      
+                  
                         &::after{
-                          
+                     
                         }
-                        &:not(.collapsed){
-                            & .user{
-                                & .icon{
-                             
-                                }
-                            }
-                            &::after{
-                             
-                            }
-                        }
-                        &:focus{
-                           
-                        }
-                        & .user{
-                            & .icon{
-                               
-                            }
-    
+                        &::not(.collapsed)::after{
+                       
                         }
                     }
                 }
@@ -2427,151 +2497,77 @@
     
 }
 // Medium devices (tablets, less than 992px)
-@mixin ourServices-mixin-max-md() {
-    .ourServices{
+@mixin accoidenSection-mixin-max-md() {
+    .accoidenSection{
+        & .accoidenImg{
+    
+        }
         & .accordion{
-            & .accordion-item{
+            & .accordion-item {
                 & .accordion-header{
                     & .accordion-button{
-                      
+                        font-size: 22px;
+                        line-height: 34px;
                         &::after{
-                          
+                     
                         }
-                        &:not(.collapsed){
-                            & .user{
-                                & .icon{
-                             
-                                }
-                            }
-                            &::after{
-                             
-                            }
-                        }
-                        &:focus{
-                           
-                        }
-                        & .user{
-                            & .icon{
-                               
-                            }
-    
+                        &::not(.collapsed)::after{
+                       
                         }
                     }
                 }
             }
         }
     }
+    
 }
-// Large devices (desktops, less than 1200px)
-@mixin ourServices-mixin-max-lg() {
-    .ourServices{
+// Small devices (landscape phones, less than 768px)
+@mixin accoidenSection-mixin-max-sm() {
+    .accoidenSection{
+        & .accoidenImg{
+    
+        }
         & .accordion{
-            & .accordion-item{
+            & .accordion-item {
                 & .accordion-header{
                     & .accordion-button{
-                      
+                        font-size: 18px;
+                        line-height: 27px;
                         &::after{
-                          
+                     
                         }
-                        &:not(.collapsed){
-                            & .user{
-                                & .icon{
-                             
-                                }
-                            }
-                            &::after{
-                             
-                            }
-                        }
-                        &:focus{
-                           
-                        }
-                        & .user{
-                            & .icon{
-                               
-                            }
-    
+                        &::not(.collapsed)::after{
+                       
                         }
                     }
                 }
             }
         }
     }
+    
 }
-// X-Large devices (large desktops, less than 1400px)
-@mixin ourServices-mixin-max-xl() {
-    .ourServices{
+// X-Small devices (portrait phones, less than 576px)
+@mixin accoidenSection-mixin-max-xs() {
+    .accoidenSection{
+        & .accoidenImg{
+    
+        }
         & .accordion{
-            & .accordion-item{
+            & .accordion-item {
                 & .accordion-header{
                     & .accordion-button{
-                      
+                        font-size: 16px;
+                        line-height: 25px;
                         &::after{
-                          
+                     
                         }
-                        &:not(.collapsed){
-                            & .user{
-                                & .icon{
-                             
-                                }
-                            }
-                            &::after{
-                             
-                            }
+                        &::not(.collapsed)::after{
+                       
                         }
-                        &:focus{
-                           
-                        }
-                        & .user{
-                            & .icon{
-                               
-                            }
+                    }
+                }
+            }
+        }
+    }
     
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-// parentsSay
-.parentsSay{
-    & .studentsSaysection{
-        & .card{
-           
-            &::before{
-                position: absolute;
-                content: '';
-                background-image: url(../img/Main-page/colon.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 24px;
-                width: 30px;
-                top: -12px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            & .card-body{
-                & .cardimages{
-                    width: 50px ;
-                    height: 50px ;
-                   
-                    & .user-img{
-                        width: 50px !important;
-                        height: 50px !important;
-
-                    }
-                }
-                & .card-content{
-                    & .card-subheading{
-                        color: $theme1;
-                    }
-                    & .card-subheading-title{
-                        color: $theme2;
-                    }
-                }
-            }
-        }
-    }
 }
