@@ -83,9 +83,6 @@
         }
     }
 }
-
-    
-
 // Medium devices (tablets, less than 992px)
 @mixin navbar-mixin-max-md() {
     .navbar{
@@ -167,4 +164,50 @@
         }
     }
     
+}
+
+@mixin navbar-mixin-max-420px(){
+    .navbar{
+        height: 60px;
+         & .logo{
+             width: 100px;
+         
+         }
+             & .offcanvas-body{
+                 & .navbar-nav{
+                     & .nav-item{
+                         & .nav-link{
+                           
+                             &:hover{
+                             
+                             }
+                         }
+                     }
+                 }
+             }
+         
+     }
+}
+@mixin offcanvas-mixin-max-420px(){
+    .offcanvas{
+        & .offcanvas-header{
+            & .logo{
+                width: 100px;
+            
+            }
+        }
+             & .offcanvas-body{
+                 & .navbar-nav{
+                     & .nav-item{
+                         & .nav-link{
+                           font-size: 14px;
+                             &:hover{
+                             
+                             }
+                         }
+                     }
+                 }
+             }
+         
+     }
 }

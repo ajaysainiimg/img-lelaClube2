@@ -284,8 +284,8 @@
                 line-height: 22px;
             }
             & .heroBtn{
-                width: 255px;
-                height: 55px;
+                width: 250px;
+                height: 50px;
             }
         }
         & .heroRightImg{
@@ -399,7 +399,7 @@
             }
         }
         & .detailText{
-         
+         font-size: 13px;
         }
     }
 }
@@ -682,6 +682,9 @@
                     font-size: 26px;
                     line-height: 33px;
                    }
+                   & .text{
+                    font-size: 13px;
+                   }
                 }
             }
             & .owl-dots{
@@ -821,7 +824,7 @@
                 line-height: 33px;
             }
             & .text{
-              
+              font-size: 13px;
             }
         }
     }
@@ -1350,7 +1353,8 @@
         }
         & .mobileSectionBtn{
             & .heroBtn{
-                width: 255px;
+                width: 225px;
+                height: 50px;
             }
         }
         & .mobileSectionImg{
@@ -1602,7 +1606,7 @@
     }
     & .content-container{
         background: rgba(255,255,255,.6);
-        box-shadow: 0 3px 4px #00000010;
+        // box-shadow: 0 3px 4px #00000010;
         border: 1px solid #ffffff;
         opacity: 1;
         backdrop-filter: blur(14px);
@@ -1742,7 +1746,7 @@
             }
         & .heroBtn{
             width: 255px;
-            height: 55px;
+            height: 50px;
         }
         }
     }
@@ -1882,8 +1886,8 @@
             }
         }
         & .heroBtn{
-            width: 335px;
-            height: 60px;
+            width: 250px;
+            height: 50px;
         }
         & .instagramOwl{
             & .item{
@@ -2421,14 +2425,19 @@
                         height: 15px;
                         width: 15px;
                     }
-                    &::not(.collapsed)::after{
-                        background-image: url(../img/Main-page/minus.svg);
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        height: 5px;
-                        width: 15px;
-                    }
+                    &:not(.collapsed)::after {
+                        content: '';
+                        background: url(../img/Main-page/minus.svg);
+                         height: 4px;
+                         width: 18px;
+                         border-radius: 20px;
+                         background-size: cover;
+                         background-position: center;
+                      }
+                      &:not(.collapsed) {
+                        background-color: transparent ;
+                        color: $theme1;
+                      }
                 }
             }
         }
