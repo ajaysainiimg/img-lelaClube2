@@ -2,7 +2,7 @@
 // heroSection
 .heroSection{
     & .heroImg{
-        width: 300px;
+        // width: 300px;
         height: 90%;
         transition: all 0.3s ease-in-out;
         &:hover{
@@ -10,7 +10,7 @@
         }
     }
     & .mainCol{
-        width: 400px;
+     
         & .animationHero{
             height: 250px;
             & img{
@@ -88,7 +88,7 @@
         }
     }
     & .heroRightImg{
-        width: 300px;
+        // width: 300px;
         & .routetStar{
             height: 180px;
             width: 100%;
@@ -168,7 +168,7 @@
 @mixin heroSection-mixin-max-lg() {
     .heroSection{
         & .heroImg{
-            height: 74%;
+            // height: 74%;
             &:hover{
              
             }
@@ -199,13 +199,13 @@
 @mixin heroSection-mixin-max-md() {
     .heroSection{
         & .heroImg{
-          display: none;
+        //   display: none;
             &:hover{
              
             }
         }
         & .mainCol{
-            width: 700px;
+            // width: 700px;
             & .animationHero{
                 height: 200px;
                 & img{
@@ -217,12 +217,13 @@
             }
             & .heroBtn{
                 width: 289px;
+                height: 56px;
             }
         }
         & .heroRightImg{
            
             & .routetStar{
-                display: none;
+              
                 
             }
         }
@@ -233,13 +234,14 @@
 @mixin heroSection-mixin-max-sm() {
     .heroSection{
         & .heroImg{
-        
+            height: 60%;
             &:hover{
              
             }
         }
         & .mainCol{
-            width: 476px;
+            position: absolute;
+            z-index: 4;
             & .animationHero{
                 
                 & img{
@@ -256,7 +258,8 @@
         & .heroRightImg{
            
             & .routetStar{
-          
+                height: 150px;
+                right: 20px;
             }
         }
     
@@ -266,13 +269,13 @@
 @mixin heroSection-mixin-max-xs() {
     .heroSection{
         & .heroImg{
-        
+            height: auto;
             &:hover{
              
             }
         }
         & .mainCol{
-            width: 380px;
+            
             & .animationHero{
                 height: 150px;
                 & img{
@@ -1434,12 +1437,18 @@
           
             & .testimonialBox{
                 background-color: $theme1;
-                height:44%;
+                height:270px !important;
                 width: 100%;
     
                 & .sliderText{
                     font-size: 22px;
                     line-height: 28px;
+                    display: -webkit-box;
+                    max-width: 400px;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }
@@ -1528,7 +1537,7 @@
             & .testimonialCard{
               
                 & .testimonialBox{
-                 
+                    height: 315px !important;
         
                     & .sliderText{
                       
@@ -1555,7 +1564,7 @@
             & .testimonialCard{
               
                 & .testimonialBox{
-                 
+                    height: 260px !important;
         
                     & .sliderText{
                         font-size: 16px;
@@ -1581,13 +1590,40 @@
                 
             }
             & .testimonialCard{
-              
+             
                 & .testimonialBox{
-                 
+                    height: 180px !important;
         
                     & .sliderText{
-                        font-size: 18px;
-                        line-height: 28px;
+                        font-size: 14px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin offcanvas-mixin-max-420px(){
+    .testimonialSection{
+        & .head{
+            font-size: 20px;
+            line-height: 28px;
+            & .icon{
+               
+            }
+        }
+        & .testimonialOwl{
+        & .owl-stage-outer {
+                
+            }
+            & .testimonialCard{
+             
+                & .testimonialBox{
+                    height: 100px !important;
+        
+                    & .sliderText{
+                        font-size: 12px;
+                        line-height: 22px;
                     }
                 }
             }

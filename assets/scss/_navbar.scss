@@ -11,7 +11,7 @@
         & .navbar-nav{
             & .nav-item{
                 & .nav-link{
-                    padding-left: 60px !important;
+                    padding-left: 60px;
                     font-size: 16px;
                     line-height: 24px;
                     font-family: 'Poppins', sans-seri;
@@ -72,10 +72,8 @@
                 & .navbar-nav{
                     & .nav-item{
                         & .nav-link{
-                           
-                            &:hover{
-                            
-                            }
+                        padding-left: 10px !important;
+                          
                         }
                     }
                 }
